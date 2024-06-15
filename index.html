@@ -1,0 +1,924 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/2.0.0/modern-normalize.min.css"
+      integrity="sha512-4xo8blKMVCiXpTaLzQSLSw3KFOVPWhm/TRtuPVc4WG6kUgjH6J03IBuG7JZPkcWMxJ5huwaBpOpnwYElP/m6wg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="./css/styles.css" />
+  </head>
+  <body>
+    <section>
+      <div class="container">
+        <ul class="list">
+          <li class="list-item">
+            <h1 class="title" lang="uk">
+              Англійська <br />
+              мова <br />
+              1 клас
+            </h1>
+            <!-- <p class="subtext" lang="uk">
+              <span class="emoji">📌</span>Послухай та повтори
+            </p> -->
+            <!-- block-boy -->
+            <div class="wapper-boy block">
+              <img
+                loading="lazy"
+                width="160"
+                height="160"
+                src="./images/man-02.png"
+                alt="image-boy"
+              />
+              <div class="music-block blue">
+                <div class="voice">
+                  <svg class="btn-icon1 magrin-right" width="40" height="40">
+                    <use
+                      href="./images/icons/icons-sprite.svg#icon-icons8-voice-48"
+                    ></use>
+                  </svg>
+                </div>
+                <div class="voice-content">
+                  <p class="voice-text-en">
+                    Привіт! Мене звати Кіріл. Я буду навчати тебе англійської
+                    мови
+                  </p>
+                  <!-- <p lang="uk">Як тебе звати?</p> -->
+                </div>
+              </div>
+            </div>
+
+            <audio class="audio-hello" src="#" autoplay preload="auto"></audio>
+
+            <!-- block-girl -->
+            <div class="wapper-girl block-girl">
+              <div class="music-block yellow">
+                <div class="voice">
+                  <svg class="btn-icon2" width="40" height="40">
+                    <use
+                      href="./images/icons/icons-sprite.svg#icon-icons8-voice-48"
+                    ></use>
+                  </svg>
+                </div>
+                <div class="voice-content">
+                  <!-- <p class="voice-text-en">My name is Anna</p> -->
+                  <p lang="uk">
+                    Привіт! Мене звати Аня. Я буду тобі допомогати навчатися
+                  </p>
+                </div>
+              </div>
+              <img
+                loading="lazy"
+                width="160"
+                height="160"
+                src="./images/woman-03.png"
+                alt="woman-02"
+              />
+            </div>
+            <audio class="audio-hi" src="#" autoplay preload="auto"></audio>
+            <h2>Ми тебе будемо навчати:</h2>
+
+            <p>- розуміти англійську на слух</p>
+            <p>- навчимо писати по англійські</p>
+            <p>- розмовляти англійською</p>
+
+            <h2>Якщо ти готовий? Тоді переходь до 1 уроку</h2>
+          </li>
+          <li class="list-item yellow item-01">
+            <h2 class="subtitle" lang="uk">Урок 1<span> Hello!</span></h2>
+            <p class="subtext" lang="uk">
+              <span class="emoji">📌</span>Послухай та повтори
+            </p>
+            <!-- block-boy -->
+            <div class="wapper-boy">
+              <img
+                loading="lazy"
+                width="100"
+                height="100"
+                src="./images/man-02.png"
+                alt="image-boy"
+              />
+              <div class="music-block blue">
+                <div class="voice">
+                  <svg class="btn-icon1" width="40" height="40">
+                    <use
+                      href="./images/icons/icons-sprite.svg#icon-icons8-voice-48"
+                    ></use>
+                  </svg>
+                </div>
+                <div class="voice-content">
+                  <p class="voice-text-en">Hello</p>
+                  <p lang="uk">Привіт</p>
+                </div>
+              </div>
+            </div>
+
+            <audio class="audio-hello" src="#" autoplay preload="auto"></audio>
+            <!-- block-girl -->
+            <div class="wapper-girl">
+              <div class="music-block yellow">
+                <div class="voice">
+                  <svg class="btn-icon2" width="40" height="40">
+                    <use
+                      href="./images/icons/icons-sprite.svg#icon-icons8-voice-48"
+                    ></use>
+                  </svg>
+                </div>
+                <div class="voice-content">
+                  <p class="voice-text-en">Hi</p>
+                  <p lang="uk">Привіт</p>
+                </div>
+              </div>
+              <img
+                loading="lazy"
+                width="100"
+                height="100"
+                src="./images/woman-03.png"
+                alt="woman-02"
+              />
+            </div>
+
+            <audio class="audio-hi" src="#" autoplay preload="auto"></audio>
+
+            <p class="subtitle-write" lang="uk">
+              Спробуй написати <span class="emoji">✍️</span>
+            </p>
+
+            <form class="js-form">
+              <label class="form-label">
+                <input
+                  class="js-input input-boy"
+                  type="text"
+                  name="hello"
+                  placeholder="👦 Привіт по англійські"
+                  required
+                  data-hello="hello"
+                />
+              </label>
+
+              <label>
+                <input
+                  class="js-input2 yellow-2"
+                  type="text"
+                  name="hi"
+                  placeholder="👩 Привіт"
+                  maxlength="4"
+                  required
+                  data-hi="hi"
+                />
+              </label>
+
+              <button class="submit" type="submit">
+                Перевірити <span class="emoji">🤔</span>
+              </button>
+
+              <p class="success"></p>
+              <audio
+                class="audio-answer"
+                src="#"
+                autoplay
+                preload="auto"
+              ></audio>
+
+              <audio
+                class="audio-answer-2"
+                src="#"
+                autoplay
+                preload="auto"
+              ></audio>
+            </form>
+          </li>
+          <li>
+            <h2>Урок 2 What is your name?</h2>
+            <p class="subtext" lang="uk">
+              <span class="emoji">📌</span>Послухай та повтори
+            </p>
+            <!-- block-boy -->
+            <div class="wapper-boy block">
+              <img
+                loading="lazy"
+                width="100"
+                height="100"
+                src="./images/man-02.png"
+                alt="image-boy"
+              />
+              <div class="music-block blue">
+                <div class="voice">
+                  <svg class="btn-icon1 magrin-right" width="40" height="40">
+                    <use
+                      href="./images/icons/icons-sprite.svg#icon-icons8-voice-48"
+                    ></use>
+                  </svg>
+                </div>
+                <div class="voice-content">
+                  <p class="voice-text-en">What is your name?</p>
+                  <p lang="uk">Як тебе звати?</p>
+                </div>
+              </div>
+            </div>
+
+            <audio class="audio-hello" src="#" autoplay preload="auto"></audio>
+
+            <!-- block-girl -->
+            <div class="wapper-girl block-girl">
+              <div class="music-block yellow">
+                <div class="voice">
+                  <svg class="btn-icon2" width="40" height="40">
+                    <use
+                      href="./images/icons/icons-sprite.svg#icon-icons8-voice-48"
+                    ></use>
+                  </svg>
+                </div>
+                <div class="voice-content">
+                  <p class="voice-text-en">My name is Anna</p>
+                  <p lang="uk">Мене звати Аня</p>
+                </div>
+              </div>
+              <img
+                loading="lazy"
+                width="100"
+                height="100"
+                src="./images/woman-03.png"
+                alt="woman-02"
+              />
+            </div>
+            <audio class="audio-hi" src="#" autoplay preload="auto"></audio>
+
+            <p class="subtitle-write" lang="uk">
+              Спробуй написати <span class="emoji">✍️</span>
+            </p>
+
+            <form class="js-form">
+              <label class="form-label">
+                <input
+                  class="js-input input-boy"
+                  type="text"
+                  name="hello"
+                  placeholder="👦 Як тебе звати?"
+                  required
+                  data-hello="hello"
+                />
+              </label>
+
+              <label>
+                <input
+                  class="js-input2 input-girl"
+                  type="text"
+                  name="hi"
+                  placeholder="👩 Мене звати Аня"
+                  maxlength="4"
+                  required
+                  data-hi="hi"
+                />
+              </label>
+
+              <button class="submit" type="submit">
+                Перевірити <span class="emoji">🤔</span>
+              </button>
+
+              <p class="success"></p>
+              <audio
+                class="audio-answer"
+                src="#"
+                autoplay
+                preload="auto"
+              ></audio>
+
+              <audio
+                class="audio-answer-2"
+                src="#"
+                autoplay
+                preload="auto"
+              ></audio>
+            </form>
+          </li>
+          <li>
+            <h2>Урок 3 And you? I am ...</h2>
+            <p class="subtext" lang="uk">
+              <span class="emoji">📌</span>Послухай та повтори
+            </p>
+            <!-- block-girl -->
+            <div class="wapper-girl block-girl">
+              <div class="music-block yellow">
+                <div class="voice">
+                  <svg class="btn-icon2" width="40" height="40">
+                    <use
+                      href="./images/icons/icons-sprite.svg#icon-icons8-voice-48"
+                    ></use>
+                  </svg>
+                </div>
+                <div class="voice-content">
+                  <p class="voice-text-en">And you?</p>
+                  <p lang="uk">А як тебе звати?</p>
+                </div>
+              </div>
+              <img
+                loading="lazy"
+                width="100"
+                height="100"
+                src="./images/woman-03.png"
+                alt="woman-02"
+              />
+            </div>
+            <audio class="audio-hi" src="#" autoplay preload="auto"></audio>
+            <!-- block-boy -->
+            <div class="wapper-boy block">
+              <img
+                loading="lazy"
+                width="100"
+                height="100"
+                src="./images/man-02.png"
+                alt="image-boy"
+              />
+              <div class="music-block blue">
+                <div class="voice">
+                  <svg class="btn-icon1" width="40" height="40">
+                    <use
+                      href="./images/icons/icons-sprite.svg#icon-icons8-voice-48"
+                    ></use>
+                  </svg>
+                </div>
+                <div class="voice-content">
+                  <p class="voice-text-en">I am Kiril</p>
+                  <p lang="uk">Я Киріл</p>
+                </div>
+              </div>
+            </div>
+
+            <audio class="audio-hello" src="#" autoplay preload="auto"></audio>
+            <p class="subtitle-write" lang="uk">
+              Спробуй написати <span class="emoji">✍️</span>
+            </p>
+
+            <form class="js-form">
+              <label class="form-label">
+                <input
+                  class="js-input input-girl"
+                  type="text"
+                  name="hello"
+                  placeholder="👦 А як тебе звати?"
+                  required
+                  data-hello="hello"
+                />
+              </label>
+
+              <label>
+                <input
+                  class="js-input2 input-boy"
+                  type="text"
+                  name="hi"
+                  placeholder="👩 Я Кирил"
+                  maxlength="4"
+                  required
+                  data-hi="hi"
+                />
+              </label>
+
+              <button class="submit" type="submit">
+                Перевірити <span class="emoji">🤔</span>
+              </button>
+
+              <p class="success"></p>
+              <audio
+                class="audio-answer"
+                src="#"
+                autoplay
+                preload="auto"
+              ></audio>
+
+              <audio
+                class="audio-answer-2"
+                src="#"
+                autoplay
+                preload="auto"
+              ></audio>
+            </form>
+          </li>
+          <li>
+            <h2>Урок 4 Nice to meet you!</h2>
+
+            <p class="subtext" lang="uk">
+              <span class="emoji">📌</span>Послухай та повтори
+            </p>
+            <!-- block-girl -->
+            <div class="wapper-girl block-girl">
+              <div class="music-block yellow">
+                <div class="voice">
+                  <svg class="btn-icon2" width="40" height="40">
+                    <use
+                      href="./images/icons/icons-sprite.svg#icon-icons8-voice-48"
+                    ></use>
+                  </svg>
+                </div>
+                <div class="voice-content">
+                  <p class="voice-text-en">Nice to meet you!</p>
+                  <p lang="uk">Приємно познайомитись!</p>
+                </div>
+              </div>
+              <img
+                loading="lazy"
+                width="100"
+                height="100"
+                src="./images/woman-03.png"
+                alt="woman-02"
+              />
+            </div>
+            <audio class="audio-hi" src="#" autoplay preload="auto"></audio>
+            <!-- block-boy -->
+            <div class="wapper-boy block">
+              <img
+                loading="lazy"
+                width="100"
+                height="100"
+                src="./images/man-02.png"
+                alt="image-boy"
+              />
+              <div class="music-block blue">
+                <div class="voice">
+                  <svg class="btn-icon1" width="40" height="40">
+                    <use
+                      href="./images/icons/icons-sprite.svg#icon-icons8-voice-48"
+                    ></use>
+                  </svg>
+                </div>
+                <div class="voice-content">
+                  <p class="voice-text-en">Nice to meet you, too!</p>
+                  <p lang="uk">Я теж радий познайомитись!</p>
+                </div>
+              </div>
+            </div>
+
+            <audio class="audio-hello" src="#" autoplay preload="auto"></audio>
+            <p class="subtitle-write" lang="uk">
+              Спробуй написати <span class="emoji">✍️</span>
+            </p>
+
+            <form class="js-form">
+              <label class="form-label">
+                <input
+                  class="js-input blue-2"
+                  type="text"
+                  name="hello"
+                  placeholder="👦 Приємно познайомитись!"
+                  required
+                  data-hello="hello"
+                />
+              </label>
+
+              <label>
+                <input
+                  class="js-input2 input-girl"
+                  type="text"
+                  name="hi"
+                  placeholder="👩 Я також радий знайомству!"
+                  maxlength="4"
+                  required
+                  data-hi="hi"
+                />
+              </label>
+
+              <button class="submit" type="submit">
+                Перевірити <span class="emoji">🤔</span>
+              </button>
+
+              <p class="success"></p>
+              <audio
+                class="audio-answer"
+                src="#"
+                autoplay
+                preload="auto"
+              ></audio>
+
+              <audio
+                class="audio-answer-2"
+                src="#"
+                autoplay
+                preload="auto"
+              ></audio>
+            </form>
+          </li>
+          <li>
+            <h2>Теорія</h2>
+            <p class="subtext" lang="uk">
+              <span class="emoji">📌</span>Послухай та повтори
+            </p>
+            <!-- block-boy -->
+            <div class="wapper-boy block">
+              <img
+                loading="lazy"
+                width="100"
+                height="100"
+                src="./images/man-02.png"
+                alt="image-boy"
+              />
+              <div class="music-block blue">
+                <div class="voice">
+                  <svg class="btn-icon1 magrin-right" width="40" height="40">
+                    <use
+                      href="./images/icons/icons-sprite.svg#icon-icons8-voice-48"
+                    ></use>
+                  </svg>
+                </div>
+                <div class="voice-content">
+                  <p class="voice-text-en">Hello <br />What is your name?</p>
+                  <p lang="uk">Привіт! <br />Як тебе звати?</p>
+                </div>
+              </div>
+            </div>
+
+            <audio class="audio-hello" src="#" autoplay preload="auto"></audio>
+
+            <!-- block-girl -->
+            <div class="wapper-girl block-girl">
+              <div class="music-block yellow">
+                <div class="voice">
+                  <svg class="btn-icon2" width="40" height="40">
+                    <use
+                      href="./images/icons/icons-sprite.svg#icon-icons8-voice-48"
+                    ></use>
+                  </svg>
+                </div>
+                <div class="voice-content">
+                  <p class="voice-text-en">
+                    Hi! <br />My name is Anna <br />
+                    And you?
+                  </p>
+                  <p lang="uk">
+                    Привіт! <br />Мене звати Аня <br />А як тебе звати?
+                  </p>
+                </div>
+              </div>
+              <img
+                loading="lazy"
+                width="100"
+                height="100"
+                src="./images/woman-03.png"
+                alt="woman-02"
+              />
+            </div>
+            <audio class="audio-hi" src="#" autoplay preload="auto"></audio>
+
+            <!-- block-boy -->
+            <div class="wapper-boy block">
+              <img
+                loading="lazy"
+                width="100"
+                height="100"
+                src="./images/man-02.png"
+                alt="image-boy"
+              />
+              <div class="music-block blue">
+                <div class="voice magrin-right">
+                  <svg class="btn-icon1 magrin-right" width="40" height="40">
+                    <use
+                      href="./images/icons/icons-sprite.svg#icon-icons8-voice-48"
+                    ></use>
+                  </svg>
+                </div>
+                <div class="voice-content">
+                  <p class="voice-text-en">I am Kiril</p>
+                  <p lang="uk">Я Кіріл</p>
+                </div>
+              </div>
+            </div>
+
+            <audio class="audio-hello" src="#" autoplay preload="auto"></audio>
+
+            <!-- block-girl -->
+            <div class="wapper-girl block-girl">
+              <div class="music-block yellow">
+                <div class="voice">
+                  <svg class="btn-icon2" width="40" height="40">
+                    <use
+                      href="./images/icons/icons-sprite.svg#icon-icons8-voice-48"
+                    ></use>
+                  </svg>
+                </div>
+                <div class="voice-content">
+                  <p class="voice-text-en">Nice to meet you!</p>
+                  <p lang="uk">Приємно познайомитись!</p>
+                </div>
+              </div>
+              <img
+                loading="lazy"
+                width="100"
+                height="100"
+                src="./images/woman-03.png"
+                alt="woman-02"
+              />
+            </div>
+            <audio class="audio-hi" src="#" autoplay preload="auto"></audio>
+
+            <!-- block-boy -->
+            <div class="wapper-boy block">
+              <img
+                loading="lazy"
+                width="100"
+                height="100"
+                src="./images/man-02.png"
+                alt="image-boy"
+              />
+              <div class="music-block blue">
+                <div class="voice">
+                  <svg class="btn-icon1 magrin-right" width="40" height="40">
+                    <use
+                      href="./images/icons/icons-sprite.svg#icon-icons8-voice-48"
+                    ></use>
+                  </svg>
+                </div>
+                <div class="voice-content">
+                  <p class="voice-text-en">Nice to meet you, too!</p>
+                  <p lang="uk">Я теж радий познайомитись!</p>
+                </div>
+              </div>
+            </div>
+
+            <audio class="audio-hello" src="#" autoplay preload="auto"></audio>
+          </li>
+          <li>
+            <h2>Практика на слух</h2>
+            <p class="subtext" lang="uk">
+              <span class="emoji">📌</span>Послухай та повтори
+            </p>
+            <!-- block-boy -->
+            <div class="wapper-boy">
+              <img
+                loading="lazy"
+                width="100"
+                height="100"
+                src="./images/man-02.png"
+                alt="image-boy"
+              />
+              <div class="music-block blue">
+                <div class="voice">
+                  <svg class="btn-icon1" width="40" height="40">
+                    <use
+                      href="./images/icons/icons-sprite.svg#icon-icons8-voice-48"
+                    ></use>
+                  </svg>
+                </div>
+                <div class="voice-content">
+                  <p class="voice-text-en">. . . ?</p>
+                  <!-- <p lang="uk">Привіт</p> -->
+                </div>
+              </div>
+            </div>
+
+            <audio class="audio-hello" src="#" autoplay preload="auto"></audio>
+
+            <!-- block-girl -->
+            <div class="wapper-girl">
+              <div class="music-block yellow">
+                <div class="voice">
+                  <svg class="btn-icon2" width="40" height="40">
+                    <use
+                      href="./images/icons/icons-sprite.svg#icon-icons8-voice-48"
+                    ></use>
+                  </svg>
+                </div>
+                <div class="voice-content">
+                  <p class="voice-text-en">. . . ?</p>
+                  <!-- <p lang="uk">Привіт</p> -->
+                </div>
+              </div>
+              <img
+                loading="lazy"
+                width="100"
+                height="100"
+                src="./images/woman-03.png"
+                alt="woman-02"
+              />
+            </div>
+
+            <audio class="audio-hi" src="#" autoplay preload="auto"></audio>
+
+            <p class="subtitle-write" lang="uk">
+              Спробуй написати <span class="emoji">✍️</span>
+            </p>
+
+            <form class="js-form">
+              <label class="form-label">
+                <input
+                  class="js-input input-boy"
+                  type="text"
+                  name="hello"
+                  placeholder="👦 Привіт!"
+                  required
+                  data-hello="hello"
+                />
+              </label>
+
+              <label>
+                <input
+                  class="js-input2 input-boy"
+                  type="text"
+                  name="hi"
+                  placeholder="👦 Як тебе звати?"
+                  maxlength="4"
+                  required
+                  data-hi="hi"
+                />
+              </label>
+
+              <label class="form-label">
+                <input
+                  class="js-input input-girl"
+                  type="text"
+                  name="hello"
+                  placeholder="👩  Привіт!"
+                  required
+                  data-hello="hello"
+                />
+              </label>
+
+              <label>
+                <input
+                  class="js-input2 input-girl"
+                  type="text"
+                  name="hi"
+                  placeholder="👩  Мене звати Анна"
+                  maxlength="4"
+                  required
+                  data-hi="hi"
+                />
+              </label>
+
+              <label>
+                <input
+                  class="js-input2 input-girl"
+                  type="text"
+                  name="hi"
+                  placeholder="👩 А як тебе звати?"
+                  maxlength="4"
+                  required
+                  data-hi="hi"
+                />
+              </label>
+
+              <button class="submit" type="submit">
+                Перевірити <span class="emoji">🤔</span>
+              </button>
+
+              <p class="success"></p>
+              <audio
+                class="audio-answer"
+                src="#"
+                autoplay
+                preload="auto"
+              ></audio>
+
+              <audio
+                class="audio-answer-2"
+                src="#"
+                autoplay
+                preload="auto"
+              ></audio>
+            </form>
+
+            <!-- block-boy -->
+            <div class="wapper-boy">
+              <img
+                loading="lazy"
+                width="100"
+                height="100"
+                src="./images/man-02.png"
+                alt="image-boy"
+              />
+              <div class="music-block blue">
+                <div class="voice">
+                  <svg class="btn-icon1" width="40" height="40">
+                    <use
+                      href="./images/icons/icons-sprite.svg#icon-icons8-voice-48"
+                    ></use>
+                  </svg>
+                </div>
+                <div class="voice-content">
+                  <p class="voice-text-en">. . . ?</p>
+                  <!-- <p lang="uk">Привіт</p> -->
+                </div>
+              </div>
+            </div>
+
+            <audio class="audio-hello" src="#" autoplay preload="auto"></audio>
+
+            <!-- block-girl -->
+            <div class="wapper-girl">
+              <div class="music-block yellow">
+                <div class="voice">
+                  <svg class="btn-icon2" width="40" height="40">
+                    <use
+                      href="./images/icons/icons-sprite.svg#icon-icons8-voice-48"
+                    ></use>
+                  </svg>
+                </div>
+                <div class="voice-content">
+                  <p class="voice-text-en">. . . ?</p>
+                  <!-- <p lang="uk">Привіт</p> -->
+                </div>
+              </div>
+              <img
+                loading="lazy"
+                width="100"
+                height="100"
+                src="./images/woman-03.png"
+                alt="woman-02"
+              />
+            </div>
+
+            <audio class="audio-hi" src="#" autoplay preload="auto"></audio>
+
+            <!-- block-boy -->
+            <div class="wapper-boy">
+              <img
+                loading="lazy"
+                width="100"
+                height="100"
+                src="./images/man-02.png"
+                alt="image-boy"
+              />
+              <div class="music-block blue">
+                <div class="voice">
+                  <svg class="btn-icon1" width="40" height="40">
+                    <use
+                      href="./images/icons/icons-sprite.svg#icon-icons8-voice-48"
+                    ></use>
+                  </svg>
+                </div>
+                <div class="voice-content">
+                  <p class="voice-text-en">. . . ?</p>
+                  <!-- <p lang="uk">Привіт</p> -->
+                </div>
+              </div>
+            </div>
+
+            <audio class="audio-hello" src="#" autoplay preload="auto"></audio>
+
+            <p class="subtitle-write" lang="uk">
+              Спробуй написати <span class="emoji">✍️</span>
+            </p>
+
+            <form class="js-form">
+              <label class="form-label">
+                <input
+                  class="js-input input-boy"
+                  type="text"
+                  name="hello"
+                  placeholder="👦 Я Кіріл"
+                  required
+                  data-hello="hello"
+                />
+              </label>
+
+              <label>
+                <input
+                  class="js-input2 input-girl"
+                  type="text"
+                  name="hi"
+                  placeholder="👩 Приємно познайомитись!"
+                  maxlength="4"
+                  required
+                  data-hi="hi"
+                />
+              </label>
+
+              <label class="form-label">
+                <input
+                  class="js-input input-boy"
+                  type="text"
+                  name="hello"
+                  placeholder="👦 Я теж радий знайоиству!"
+                  required
+                  data-hello="hello"
+                />
+              </label>
+              <button class="submit" type="submit">
+                Перевірити <span class="emoji">🤔</span>
+              </button>
+
+              <p class="success"></p>
+              <audio
+                class="audio-answer"
+                src="#"
+                autoplay
+                preload="auto"
+              ></audio>
+
+              <audio
+                class="audio-answer-2"
+                src="#"
+                autoplay
+                preload="auto"
+              ></audio>
+            </form>
+          </li>
+        </ul>
+      </div>
+    </section>
+    <script src="./js/english.js" type="module"></script>
+  </body>
+</html>
