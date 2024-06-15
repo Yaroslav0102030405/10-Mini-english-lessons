@@ -177,7 +177,11 @@ li {
   justify-content: flex-end;
 }
 
-/* .list li:nth-child(3) {
+.blueviolet {
+  background-color: blueviolet;
+}
+
+.list li:nth-child(3) {
   background-color: #2ecc71;
 }
 
@@ -195,7 +199,7 @@ li {
 
 .list li:last-child {
   background-color: #ff6d28;
-} */
+}
 
 .yellow {
   background-color: #f4c144;
