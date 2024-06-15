@@ -161,7 +161,7 @@ li {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  gap: 20px;
+  /* gap: 20px; */
 }
 
 .list li {
