@@ -12,10 +12,10 @@ body {
   font-optical-sizing: auto;
   font-weight: 400;
   font-style: normal;
-  /* background-color: blueviolet; */
+  background-color: blueviolet;
   /* color: #f4c144; */
   color: #001d5f;
-  background-color: white;
+  /* background-color: white; */
 
   margin: 0;
   padding: 0;
@@ -122,12 +122,6 @@ li {
   cursor: pointer;
 }
 
-/* .b {
-  justify-content: flex-end;
-  background-color: #f4c144;
-  margin-left: auto;
-} */
-
 .wapper-girl {
   display: flex;
   align-items: center;
@@ -182,19 +176,7 @@ li {
   justify-content: flex-end;
 }
 
-/* .item-01 {
-    background-color: #f4c144;
-  } */
-
-/* .list li:first-child {
-    background-color: #f4c144;
-  } */
-
-/* .list li:nth-child(2) {
-    background-color: #f4c144;
-  } */
-
-.list li:nth-child(3) {
+/* .list li:nth-child(3) {
   background-color: #2ecc71;
 }
 
@@ -212,11 +194,11 @@ li {
 
 .list li:last-child {
   background-color: #ff6d28;
-}
+} */
 
-.yellow {
+/* .yellow {
   background-color: #f4c144;
-}
+} */
 
 .yellow-2 {
   border-bottom: 5px solid #ffd700;
