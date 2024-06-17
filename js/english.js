@@ -83,6 +83,7 @@ function onFormSubmit(e) {
     // refs.btnSubmit.style.backgroundColor = "tomato";
     markupError();
     // refs.success.textContent = "❌ Не правильна відповідь";
+    // refs.item01.classList.add("gray2");
   } else if (hi === "Hi ✔️" || hi === "hi ✔️") {
     onAudioError();
     // item3.src = "../audio/Відповідь не правиль.mp3";
@@ -94,6 +95,7 @@ function onFormSubmit(e) {
     // refs.success.innerHTML = "Будь ласка спробуйте ще";
     // refs.btnSubmit.style.backgroundColor = "tomato";
     markupError();
+    refs.item01.classList.add("gray3");
   } else {
     // item3.src = "../audio/Відповідь не правиль.mp3";
     // inputEl.value = `${inputEl.value} ❌`;
