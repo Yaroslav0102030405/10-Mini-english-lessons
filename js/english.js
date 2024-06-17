@@ -1,4 +1,9 @@
 const refs = {
+  textColorWhite: document.querySelector(".activeKiril"),
+  activeHello: document.querySelector(".activeHello"),
+  activeHi: document.querySelector(".activeHi"),
+  activeWhat: document.querySelector(".activeWhat"),
+  activeMyName: document.querySelector(".activeMyName"),
   iconBtn1: document.querySelector(".btn-icon1"),
   iconBtn1: document.querySelector(".btn-icon1"),
   iconBtn2: document.querySelector(".btn-icon2"),
@@ -24,31 +29,50 @@ const refs = {
   audioBtn4: document.querySelector(".audio-btn-4"),
   audioAndYou: document.querySelector(".audio-amd-you"),
   audioBtn5: document.querySelector(".audio-btn-5"),
+  audioIamKiril: document.querySelector(".audio-am-kiril"),
+  audioBtn6: document.querySelector(".audio-btn-6"),
 };
 
 refs.iconBtn1.addEventListener("click", () => {
   refs.item1.src = "../audio/Привіт Мене звати Кі.mp3";
+  // refs.iconBtn1.style.display = "none";
+  const textActive = refs.textColorWhite;
+  onActiveText(textActive);
 });
 
 refs.audioBtn1.addEventListener("click", () => {
   refs.audioHello.src = "../audio/boy/Hello .mp3";
+  // refs.textColorWhite.classList.add("activeHello");
+  // const textHello = refs.activeHello;
+  onActiveText(refs.activeHello);
 });
 
 refs.audioBtn2.addEventListener("click", () => {
   refs.audioHi.src = "../audio/girl/Hi .mp3";
+  onActiveText(refs.activeHi);
 });
 
 refs.audioBtn3.addEventListener("click", () => {
   refs.audioWhat3.src = "../audio/boy/What is your name .mp3";
+  onActiveText(refs.activeWhat);
 });
 
 refs.audioBtn4.addEventListener("click", () => {
   refs.audioMyName.src = "../audio/girl/My name is Anna.mp3";
+  onActiveText(refs.activeMyName);
 });
 
 refs.audioBtn5.addEventListener("click", () => {
   refs.audioAndYou.src = "../audio/girl/And you .mp3";
 });
+
+refs.audioBtn6.addEventListener("click", () => {
+  refs.audioIamKiril.src = "../audio/boy/I am Kiril.mp3";
+});
+
+function onActiveText(active) {
+  active.classList.add("voice-text-en");
+}
 
 refs.formSubmit.addEventListener("submit", onFormSubmit);
 refs.inputEl.addEventListener("input", onInput);
@@ -106,11 +130,11 @@ const markupError = () => {
 
 // audio
 const onAudioSuccess = () => {
-  refs.item3.src = "../audio/Правильна відповідь.mp3";
+  refs.item3.src = "../audio/Правильна відповідь .mp3";
 };
 
 const onAudioError = () => {
-  refs.item3.src = "../audio/Відповідь не правиль.mp3";
+  refs.item3.src = "../audio/Відповідь неправильн.mp3";
 };
 
 // input-1

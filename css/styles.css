@@ -114,15 +114,6 @@ li {
   background-color: #446df4;
 }
 
-.voice-text-en {
-  color: white;
-  text-shadow: 3px 4px 5px black;
-}
-
-.voice {
-  cursor: pointer;
-}
-
 .wapper-girl {
   display: flex;
   align-items: center;
@@ -337,4 +328,13 @@ input::placeholder {
 
 .magrin-right {
   margin-right: 10px;
+}
+
+.voice-text-en {
+  color: white;
+  text-shadow: 3px 4px 5px black;
+}
+
+.voice {
+  cursor: pointer;
 }
