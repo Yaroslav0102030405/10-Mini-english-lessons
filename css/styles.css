@@ -277,11 +277,11 @@ input::placeholder {
 }
 
 .input-boy {
-  border-bottom: 5px solid #446df4;
+  border-bottom: 5px solid blue;
 }
 
 .input-girl {
-  border-bottom: 5px solid #f4c144;
+  border-bottom: 5px solid yellow;
 }
 
 /* .success {
