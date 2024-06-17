@@ -311,15 +311,15 @@ input::placeholder {
     border-radius: 8px;
   } */
 
+.item-01.gray3 {
+  background-color: tomato;
+}
+
 .item-01.gray2 {
   /* background-color: blueviolet; */
   /* background-color: white; */
   background-color: #2ecc71;
 }
-
-/* .item-01.gray3 {
-  background-color: tomato;
-} */
 
 .emoji {
   font-size: 20px;
