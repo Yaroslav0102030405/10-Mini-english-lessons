@@ -107,6 +107,7 @@ function onFormSubmit(e) {
     // refs.success.innerHTML = "Будь ласка спробуйте ще";
     // refs.btnSubmit.style.backgroundColor = "tomato";
     markupError();
+    refs.item01.classList.add("gray3");
   }
 }
 
