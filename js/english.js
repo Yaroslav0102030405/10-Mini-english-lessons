@@ -1,4 +1,5 @@
 const refs = {
+  // додавання класу і white-color
   textColorWhite: document.querySelector(".activeKiril"),
   activeHello: document.querySelector(".activeHello"),
   activeHi: document.querySelector(".activeHi"),
@@ -18,6 +19,7 @@ const refs = {
   activeLessonBoy1: document.querySelector(".activeLessonBoy1"),
   activeLessonGirl1: document.querySelector(".activeLessonGirl1"),
   activeLessonBoy2: document.querySelector(".activeLessonBoy2"),
+  // інший код
   iconBtn1: document.querySelector(".btn-icon1"),
   iconBtn1: document.querySelector(".btn-icon1"),
   iconBtn2: document.querySelector(".btn-icon2"),
@@ -25,6 +27,7 @@ const refs = {
   item2: document.querySelector(".audio-hi"),
   item3: document.querySelector(".audio-answer"),
   item4: document.querySelector(".audio-answer-2"),
+  // форма 1
   formSubmit: document.querySelector(".js-form"),
   btnSubmit: document.querySelector(".submit"),
   dataHello: document.querySelector('[data-hello="hello"]'),
@@ -33,6 +36,12 @@ const refs = {
   item01: document.querySelector(".item-01"),
   inputEl: document.querySelector(".js-input"),
   inputEl2: document.querySelector(".js-input2"),
+  // форма 2
+  formSubmit02: document.querySelector(".js-form-2"),
+  input02: document.querySelector(".js-input-02"),
+  input03: document.querySelector(".js-input-03"),
+  audioSrc2: document.querySelector(".audio-answer3"),
+  // зміна аудіо src
   audioHello: document.querySelector(".audio-hello"),
   audioBtn1: document.querySelector(".audio-btn-1"),
   audioHi: document.querySelector(".audio-hi"),
@@ -71,6 +80,7 @@ const refs = {
   audioBtn18: document.querySelector(".audio-btn-18"),
 };
 
+// додавання аудіо та зміна кольору
 refs.iconBtn1.addEventListener("click", () => {
   refs.item1.src = "../audio/Привіт Мене звати Кі.mp3";
   const textActive = refs.textColorWhite;
@@ -167,6 +177,7 @@ refs.audioBtn18.addEventListener("click", () => {
   onActiveText(refs.activeLessonBoy2);
 });
 
+// додавання класу
 function onActiveText(active) {
   active.classList.add("voice-text-en");
 }
@@ -178,10 +189,11 @@ refs.inputEl2.addEventListener("input", onInput2);
 function onFormSubmit(e) {
   e.preventDefault();
   const formElements = e.currentTarget.elements;
-  // console.log(formElements);
-
   const hello = formElements.hello.value;
   const hi = formElements.hi.value;
+
+  // const success = (refs.item3.src = "../audio/Правильна відповідь .mp3");
+  // const error = (refs.item3.src = "../audio/Відповідь неправильн.mp3");
 
   if (
     (hello === "Hello ✔️" && hi === "Hi ✔️") ||
@@ -211,27 +223,24 @@ function onFormSubmit(e) {
   }
 }
 
-// markup
-const markupSuccess = () => {
-  refs.btnSubmit.textContent = "✔️ Правильно";
-  refs.btnSubmit.style.backgroundColor = "#2ecc71";
-  // refs.success.innerHTML = "Будь ласка перeходьте <br /> до уроку 2";
-  refs.item01.classList.add("gray2");
-};
-
-const markupError = () => {
-  refs.btnSubmit.textContent = "❌ Не правильно";
-  // refs.success.innerHTML = "Будь ласка спробуйте ще";
-  refs.btnSubmit.style.backgroundColor = "tomato";
-};
-
 // audio
 const onAudioSuccess = () => {
   refs.item3.src = "../audio/Правильна відповідь .mp3";
 };
-
 const onAudioError = () => {
   refs.item3.src = "../audio/Відповідь неправильн.mp3";
+};
+
+// markup
+const markupSuccess = () => {
+  refs.btnSubmit.textContent = "✔️ Правильно";
+  refs.btnSubmit.style.backgroundColor = "#2ecc71";
+  // refs.item01.classList.add("gray2");
+};
+
+const markupError = () => {
+  refs.btnSubmit.textContent = "❌ Не правильно";
+  refs.btnSubmit.style.backgroundColor = "tomato";
 };
 
 // input-1
@@ -260,5 +269,82 @@ const onSmileySuccess = (inputSuccess) => {
 };
 
 const onSmileyError = (inputError) => {
+  inputError.value = `${inputError.value} ❌`;
+};
+
+// форма 2
+refs.formSubmit02.addEventListener("submit", onFormSubmit02);
+refs.input02.addEventListener("input", onInput1);
+refs.input03.addEventListener("input", onInput22);
+
+function onFormSubmit02(e) {
+  e.preventDefault();
+  const what = refs.input02.value;
+  const myname = refs.input03.value;
+
+  if (
+    (what === "What is your name ✔️" && myname === "My name is Anna ✔️") ||
+    (what === "what is your name ✔️" && myname === "my name is anna ✔️") ||
+    (what === "What is your name ✔️" && myname === "my name is anna ✔️") ||
+    (what === "what is your name ✔️" && myname === "My name is Anna ✔️")
+  ) {
+    // onAudioSuccess();
+    refs.audioSrc2.src = "../audio/Правильна відповідь .mp3";
+    refs.item01.classList.add("gray2");
+    markupSuccess();
+  } else if (
+    what === "What is your name ✔️" ||
+    what === "what is your name ✔️"
+  ) {
+    // onAudioError();
+    refs.audioSrc2.src = "../audio/Відповідь неправильн.mp3";
+    onSmileyError(refs.input02);
+    markupError();
+    refs.item01.classList.add("gray3");
+  } else if (
+    myname === "My name is Anna ✔️" ||
+    myname === "my name is Anna ✔️"
+  ) {
+    // onAudioError();
+    refs.audioSrc2.src = "../audio/Відповідь неправильн.mp3";
+    onSmileyError(refs.input01);
+    markupError();
+    refs.item01.classList.add("gray3");
+  } else {
+    onSmileyError(refs.input02);
+    onSmileyError(refs.input03);
+    // onAudioError();
+    refs.audioSrc2.src = "../audio/Відповідь неправильн.mp3";
+    markupError();
+    refs.item01.classList.add("gray3");
+  }
+}
+
+// input-1
+function onInput1(event) {
+  if (
+    event.currentTarget.value === "What is your name" ||
+    event.currentTarget.value === "what is your name"
+  ) {
+    onSmileySuccess1(refs.input02);
+  }
+}
+
+// inpup-2
+function onInput22(event) {
+  if (
+    event.currentTarget.value === "My name is Anna" ||
+    event.currentTarget.value === "my name is anna"
+  ) {
+    onSmileySuccess1(refs.input03);
+  }
+}
+
+// emoji success and error
+const onSmileySuccess1 = (inputSuccess) => {
+  inputSuccess.value = `${inputSuccess.value} ✔️`;
+};
+
+const onSmileyError1 = (inputError) => {
   inputError.value = `${inputError.value} ❌`;
 };
