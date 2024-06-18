@@ -43,6 +43,27 @@ const refs = {
   audioSrc2: document.querySelector(".audio-answer3"),
   btnSubmit2: document.querySelector(".submit-02"),
   itemColor: document.querySelector(".item-color-02"),
+  // форма 3
+  formSubmit03: document.querySelector(".js-form-3"),
+  inputAndYou: document.querySelector(".js-input-3"),
+  inputIamKiril: document.querySelector(".js-input-04"),
+  audioSrc3: document.querySelector(".audio-answer4"),
+  btnSubmit3: document.querySelector(".submit-03"),
+  itemColor3: document.querySelector(".item-color-03"),
+  // форма 4
+  formSubmit04: document.querySelector(".js-form-4"),
+  inputNice: document.querySelector(".js-input-4"),
+  inputToo: document.querySelector(".js-input-05"),
+  audioSrc4: document.querySelector(".audio-answer5"),
+  btnSubmit4: document.querySelector(".submit-04"),
+  itemColor4: document.querySelector(".item-color-04"),
+  // форма 5
+  // formSubmit05: document.querySelector(".js-form-5"),
+  // inputNice: document.querySelector(".js-input-5"),
+  // inputToo: document.querySelector(".js-input-06"),
+  // audioSrc5: document.querySelector(".audio-answer6"),
+  // btnSubmit5: document.querySelector(".submit-05"),
+  // itemColor5: document.querySelector(".item-color-05"),
   // зміна аудіо src
   audioHello: document.querySelector(".audio-hello"),
   audioBtn1: document.querySelector(".audio-btn-1"),
@@ -207,18 +228,18 @@ function onFormSubmit(e) {
     onAudioError();
     onSmileyError(refs.inputEl2);
     markupError();
-    refs.item01.classList.add("gray3");
+    // refs.item01.classList.add("gray3");
   } else if (hi === "Hi ✔️" || hi === "hi ✔️") {
     onAudioError();
     onSmileyError(refs.inputEl);
     markupError();
-    refs.item01.classList.add("gray3");
+    // refs.item01.classList.add("gray3");
   } else {
     onSmileyError(refs.inputEl);
     onSmileyError(refs.inputEl2);
     onAudioError();
     markupError();
-    refs.item01.classList.add("gray3");
+    // refs.item01.classList.add("gray3");
   }
 }
 
@@ -271,7 +292,7 @@ const onSmileyError = (inputError) => {
   inputError.value = `${inputError.value} ❌`;
 };
 
-// форма 2
+// форма 2 --------------------------------------------------------------
 refs.formSubmit02.addEventListener("submit", onFormSubmit02);
 refs.inputWhat.addEventListener("input", onInput1);
 refs.inputMyName.addEventListener("input", onInput22);
@@ -359,3 +380,258 @@ const onSmileySuccess1 = (inputSuccess) => {
 const onSmileyError1 = (inputError) => {
   inputError.value = `${inputError.value} ❌`;
 };
+
+// форма 3 ----------------------------------------------------------------
+refs.formSubmit03.addEventListener("submit", onFormSubmit03);
+refs.inputAndYou.addEventListener("input", onInput3);
+refs.inputIamKiril.addEventListener("input", onInput03);
+
+function onFormSubmit03(e) {
+  e.preventDefault();
+  const andYou = refs.inputAndYou.value;
+  const iamKiril = refs.inputIamKiril.value;
+
+  if (
+    (andYou === "And you ✔️" && iamKiril === "I am Kiril ✔️") ||
+    (andYou === "and you ✔️" && iamKiril === "i am kiril ✔️") ||
+    (andYou === "And you ✔️" && iamKiril === "i am kiril ✔️") ||
+    (andYou === "and you ✔️" && iamKiril === "I am Kiril ✔️")
+  ) {
+    // onAudioSuccess();
+    refs.audioSrc3.src = "../audio/Правильна відповідь .mp3";
+    refs.itemColor3.classList.add("green");
+    markupSuccess3();
+  } else if (andYou === "And you ✔️" || andYou === "and you ✔️") {
+    // onAudioError();
+    refs.audioSrc3.src = "../audio/Відповідь неправильн.mp3";
+    onSmileyError3(refs.inputIamKiril);
+    markupError3();
+    // refs.itemColor.classList.add("red");
+  } else if (iamKiril === "I am Kiril ✔️" || iamKiril === "i am kiril ✔️") {
+    // onAudioError();
+    refs.audioSrc3.src = "../audio/Відповідь неправильн.mp3";
+    onSmileyError3(refs.inputAndYou);
+    markupError3();
+    // refs.itemColor.classList.add("red");
+  } else {
+    onSmileyError3(refs.inputAndYou);
+    onSmileyError3(refs.inputIamKiril);
+    // onAudioError();
+    refs.audioSrc3.src = "../audio/Відповідь неправильн.mp3";
+    markupError3();
+    // refs.itemColor.classList.add("red");
+  }
+}
+
+// markup
+const markupSuccess3 = () => {
+  refs.btnSubmit3.textContent = "✔️ Правильно";
+  refs.btnSubmit3.style.backgroundColor = "#2ecc71";
+  // refs.item01.classList.add("gray2");
+};
+
+const markupError3 = () => {
+  refs.btnSubmit3.textContent = "❌ Не правильно";
+  refs.btnSubmit3.style.backgroundColor = "tomato";
+};
+
+// input-1
+function onInput3(event) {
+  if (
+    event.currentTarget.value === "And you" ||
+    event.currentTarget.value === "and you"
+  ) {
+    onSmileySuccess3(refs.inputAndYou);
+  }
+}
+
+// inpup-2
+function onInput03(event) {
+  if (
+    event.currentTarget.value === "I am Kiril" ||
+    event.currentTarget.value === "i am kiril"
+  ) {
+    onSmileySuccess1(refs.inputIamKiril);
+  }
+}
+
+// emoji success and error
+const onSmileySuccess3 = (inputSuccess) => {
+  inputSuccess.value = `${inputSuccess.value} ✔️`;
+};
+
+const onSmileyError3 = (inputError) => {
+  inputError.value = `${inputError.value} ❌`;
+};
+
+// форма 4 ----------------------------------------------------------------
+refs.formSubmit04.addEventListener("submit", onFormSubmit04);
+refs.inputNice.addEventListener("input", onInput4);
+refs.inputToo.addEventListener("input", onInput04);
+
+function onFormSubmit04(e) {
+  e.preventDefault();
+  const nice = refs.inputNice.value;
+  const too = refs.inputToo.value;
+
+  if (
+    (nice === "Nice to meet you ✔️" && too === "Nice to meet you too ✔️") ||
+    (nice === "nice to meet you ✔️" && too === "nice to meet you too ✔️") ||
+    (nice === "Nice to meet you ✔️" && too === "nice to meet you too ✔️") ||
+    (nice === "nice to meet you ✔️" && too === "Nice to meet you too ✔️")
+  ) {
+    // onAudioSuccess();
+    refs.audioSrc4.src = "../audio/Правильна відповідь .mp3";
+    refs.itemColor4.classList.add("green");
+    markupSuccess4();
+  } else if (nice === "Nice to meet you ✔️" || nice === "nice to meet you ✔️") {
+    // onAudioError();
+    refs.audioSrc4.src = "../audio/Відповідь неправильн.mp3";
+    onSmileyError4(refs.inputToo);
+    markupError4();
+    // refs.itemColor.classList.add("red");
+  } else if (
+    too === "Nice to meet you too ✔️" ||
+    too === "nice to meet you too ✔️"
+  ) {
+    // onAudioError();
+    refs.audioSrc4.src = "../audio/Відповідь неправильн.mp3";
+    onSmileyError4(refs.inputNice);
+    markupError4();
+    // refs.itemColor.classList.add("red");
+  } else {
+    onSmileyError4(refs.inputNice);
+    onSmileyError4(refs.inputToo);
+    // onAudioError();
+    refs.audioSrc3.src = "../audio/Відповідь неправильн.mp3";
+    markupError4();
+    // refs.itemColor.classList.add("red");
+  }
+}
+
+// markup
+const markupSuccess4 = () => {
+  refs.btnSubmit4.textContent = "✔️ Правильно";
+  refs.btnSubmit4.style.backgroundColor = "#2ecc71";
+  // refs.item01.classList.add("gray2");
+};
+
+const markupError4 = () => {
+  refs.btnSubmit4.textContent = "❌ Не правильно";
+  refs.btnSubmit4.style.backgroundColor = "tomato";
+};
+
+// input-1
+function onInput4(event) {
+  if (
+    event.currentTarget.value === "Nice to meet you" ||
+    event.currentTarget.value === "nice to meet you"
+  ) {
+    onSmileySuccess4(refs.inputNice);
+  }
+}
+
+// inpup-2
+function onInput04(event) {
+  if (
+    event.currentTarget.value === "Nice to meet you too" ||
+    event.currentTarget.value === "nice to meet you too"
+  ) {
+    onSmileySuccess4(refs.inputToo);
+  }
+}
+
+// emoji success and error
+const onSmileySuccess4 = (inputSuccess) => {
+  inputSuccess.value = `${inputSuccess.value} ✔️`;
+};
+
+const onSmileyError4 = (inputError) => {
+  inputError.value = `${inputError.value} ❌`;
+};
+
+// форма 6 ----------------------------------------------------------------
+// refs.formSubmit05.addEventListener("submit", onFormSubmit05);
+// refs.inputNice.addEventListener("input", onInpu5);
+// refs.inputToo.addEventListener("input", onInput05);
+
+// function onFormSubmit04(e) {
+//   e.preventDefault();
+//   const nice = refs.inputNice.value;
+//   const too = refs.inputToo.value;
+
+//   if (
+//     (nice === "Nice to meet you ✔️" && too === "Nice to meet you too ✔️") ||
+//     (nice === "nice to meet you ✔️" && too === "nice to meet you too ✔️") ||
+//     (nice === "Nice to meet you ✔️" && too === "nice to meet you too ✔️") ||
+//     (nice === "nice to meet you ✔️" && too === "Nice to meet you too ✔️")
+//   ) {
+//     // onAudioSuccess();
+//     refs.audioSrc4.src = "../audio/Правильна відповідь .mp3";
+//     refs.itemColor4.classList.add("green");
+//     markupSuccess4();
+//   } else if (nice === "Nice to meet you ✔️" || nice === "nice to meet you ✔️") {
+//     // onAudioError();
+//     refs.audioSrc4.src = "../audio/Відповідь неправильн.mp3";
+//     onSmileyError4(refs.inputToo);
+//     markupError4();
+//     // refs.itemColor.classList.add("red");
+//   } else if (
+//     too === "Nice to meet you too ✔️" ||
+//     too === "nice to meet you too ✔️"
+//   ) {
+//     // onAudioError();
+//     refs.audioSrc4.src = "../audio/Відповідь неправильн.mp3";
+//     onSmileyError4(refs.inputNice);
+//     markupError4();
+//     // refs.itemColor.classList.add("red");
+//   } else {
+//     onSmileyError4(refs.inputNice);
+//     onSmileyError4(refs.inputToo);
+//     // onAudioError();
+//     refs.audioSrc3.src = "../audio/Відповідь неправильн.mp3";
+//     markupError4();
+//     // refs.itemColor.classList.add("red");
+//   }
+// }
+
+// // markup
+// const markupSuccess4 = () => {
+//   refs.btnSubmit4.textContent = "✔️ Правильно";
+//   refs.btnSubmit4.style.backgroundColor = "#2ecc71";
+//   // refs.item01.classList.add("gray2");
+// };
+
+// const markupError4 = () => {
+//   refs.btnSubmit4.textContent = "❌ Не правильно";
+//   refs.btnSubmit4.style.backgroundColor = "tomato";
+// };
+
+// // input-1
+// function onInput4(event) {
+//   if (
+//     event.currentTarget.value === "Nice to meet you" ||
+//     event.currentTarget.value === "nice to meet you"
+//   ) {
+//     onSmileySuccess4(refs.inputNice);
+//   }
+// }
+
+// // inpup-2
+// function onInput04(event) {
+//   if (
+//     event.currentTarget.value === "Nice to meet you too" ||
+//     event.currentTarget.value === "nice to meet you too"
+//   ) {
+//     onSmileySuccess4(refs.inputToo);
+//   }
+// }
+
+// // emoji success and error
+// const onSmileySuccess4 = (inputSuccess) => {
+//   inputSuccess.value = `${inputSuccess.value} ✔️`;
+// };
+
+// const onSmileyError4 = (inputError) => {
+//   inputError.value = `${inputError.value} ❌`;
+// };

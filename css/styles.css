@@ -249,9 +249,9 @@ input::placeholder {
   border-bottom: 5px solid yellow;
 }
 
-.item-01.gray3 {
+/* .item-01.gray3 {
   background-color: tomato;
-}
+} */
 
 .item-01.gray2 {
   background-color: #2ecc71;
@@ -261,9 +261,21 @@ input::placeholder {
   background-color: #2ecc71;
 }
 
-.item-color-02.red {
-  background-color: tomato;
+.item-color-03.green {
+  background-color: #2ecc71;
 }
+
+.item-color-04.green {
+  background-color: #2ecc71;
+}
+
+.item-color-06.green {
+  background-color: #2ecc71;
+}
+
+/* .item-color-02.red {
+  background-color: tomato;
+} */
 
 .emoji {
   font-size: 20px;
