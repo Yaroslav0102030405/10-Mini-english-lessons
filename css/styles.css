@@ -332,7 +332,7 @@ input::placeholder {
 
 .voice-text-en {
   color: white;
-  text-shadow: 3px 4px 5px black;
+  /* text-shadow: 3px 4px 5px black; */
 }
 
 .voice {

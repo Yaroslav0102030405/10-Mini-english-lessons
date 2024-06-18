@@ -85,11 +85,6 @@
             <p>- розуміти англійську на слух</p>
             <p>- писати на англійській мові</p>
             <p>- розмовляти англійською</p>
-
-            <h2>
-              Готовий? <br />
-              Тоді починаємо навчання
-            </h2>
           </li>
           <li class="list-item item-01 blue-color">
             <h2 class="subtitle" lang="uk">Урок 1<span> Hello!</span></h2>
@@ -197,6 +192,7 @@
               ></audio>
             </form>
           </li>
+
           <li class="yellow-color">
             <h2>Урок 2 What is your name?</h2>
             <p class="subtext" lang="uk">
@@ -274,6 +270,7 @@
             <form class="js-form">
               <label class="form-label">
                 <input
+                  autocomplete="off"
                   class="js-input input-boy"
                   type="text"
                   name="hello"
@@ -285,6 +282,7 @@
 
               <label>
                 <input
+                  autocomplete="off"
                   class="js-input2 input-girl"
                   type="text"
                   name="hi"
@@ -331,7 +329,7 @@
                   </svg>
                 </div>
                 <div class="voice-content">
-                  <p class="voice-text-en">And you?</p>
+                  <p class="activeAndYou">And you?</p>
                   <p lang="uk">А як тебе звати?</p>
                 </div>
               </div>
@@ -344,7 +342,7 @@
               />
             </div>
             <audio
-              class="audio-amd-you"
+              class="audio-and-you"
               src="#"
               autoplay
               preload="auto"
@@ -367,18 +365,13 @@
                   </svg>
                 </div>
                 <div class="voice-content">
-                  <p class="voice-text-en">I am Kiril</p>
+                  <p class="activeKiril2">I am Kiril</p>
                   <p lang="uk">Я Киріл</p>
                 </div>
               </div>
             </div>
 
-            <audio
-              class="audio-am-kiril"
-              src="#"
-              autoplay
-              preload="auto"
-            ></audio>
+            <audio class="audio-kiril" src="#" autoplay preload="auto"></audio>
             <p class="subtitle-write" lang="uk">
               Спробуй написати <span class="emoji">✍️</span>
             </p>
@@ -386,6 +379,7 @@
             <form class="js-form">
               <label class="form-label">
                 <input
+                  autocomplete="off"
                   class="js-input input-girl"
                   type="text"
                   name="hello"
@@ -397,6 +391,7 @@
 
               <label>
                 <input
+                  autocomplete="off"
                   class="js-input2 input-boy"
                   type="text"
                   name="hi"
@@ -437,14 +432,14 @@
             <div class="wapper-girl block-girl">
               <div class="music-block yellow">
                 <div class="voice">
-                  <svg class="btn-icon2" width="40" height="40">
+                  <svg class="audio-btn-7 btn-icon2" width="40" height="40">
                     <use
                       href="./images/icons/icons-sprite.svg#icon-icons8-voice-48"
                     ></use>
                   </svg>
                 </div>
                 <div class="voice-content">
-                  <p class="voice-text-en">Nice to meet you!</p>
+                  <p class="activeNice">Nice to meet you!</p>
                   <p lang="uk">Приємно познайомитись!</p>
                 </div>
               </div>
@@ -456,7 +451,7 @@
                 alt="woman-02"
               />
             </div>
-            <audio class="audio-hi" src="#" autoplay preload="auto"></audio>
+            <audio class="audio-nice" src="#" autoplay preload="auto"></audio>
             <!-- block-boy -->
             <div class="wapper-boy block">
               <img
@@ -468,20 +463,20 @@
               />
               <div class="music-block blue">
                 <div class="voice">
-                  <svg class="btn-icon1" width="40" height="40">
+                  <svg class="audio-btn-8 btn-icon1" width="40" height="40">
                     <use
                       href="./images/icons/icons-sprite.svg#icon-icons8-voice-48"
                     ></use>
                   </svg>
                 </div>
                 <div class="voice-content">
-                  <p class="voice-text-en">Nice to meet you, too!</p>
+                  <p class="activeToo">Nice to meet you, too!</p>
                   <p lang="uk">Я теж радий познайомитись!</p>
                 </div>
               </div>
             </div>
 
-            <audio class="audio-hello" src="#" autoplay preload="auto"></audio>
+            <audio class="audio-too" src="#" autoplay preload="auto"></audio>
             <p class="subtitle-write" lang="uk">
               Спробуй написати <span class="emoji">✍️</span>
             </p>
@@ -489,6 +484,7 @@
             <form class="js-form">
               <label class="form-label">
                 <input
+                  autocomplete="off"
                   class="js-input blue-2"
                   type="text"
                   name="hello"
@@ -500,6 +496,7 @@
 
               <label>
                 <input
+                  autocomplete="off"
                   class="js-input2 input-girl"
                   type="text"
                   name="hi"
@@ -531,7 +528,7 @@
             </form>
           </li>
           <li>
-            <h2>Теорія</h2>
+            <h2>Урок 5 Практика</h2>
             <p class="subtext" lang="uk">
               <span class="emoji">📌</span>Послухай та повтори
             </p>
@@ -546,33 +543,42 @@
               />
               <div class="music-block blue">
                 <div class="voice">
-                  <svg class="btn-icon1 magrin-right" width="40" height="40">
+                  <svg
+                    class="audio-btn-9 btn-icon1 magrin-right"
+                    width="40"
+                    height="40"
+                  >
                     <use
                       href="./images/icons/icons-sprite.svg#icon-icons8-voice-48"
                     ></use>
                   </svg>
                 </div>
                 <div class="voice-content">
-                  <p class="voice-text-en">Hello <br />What is your name?</p>
+                  <p class="activeHelloWhat">Hello <br />What is your name?</p>
                   <p lang="uk">Привіт! <br />Як тебе звати?</p>
                 </div>
               </div>
             </div>
 
-            <audio class="audio-hello" src="#" autoplay preload="auto"></audio>
+            <audio
+              class="audio-hello-what"
+              src="#"
+              autoplay
+              preload="auto"
+            ></audio>
 
             <!-- block-girl -->
             <div class="wapper-girl block-girl">
               <div class="music-block yellow">
                 <div class="voice">
-                  <svg class="btn-icon2" width="40" height="40">
+                  <svg class="audio-btn-10 btn-icon2" width="40" height="40">
                     <use
                       href="./images/icons/icons-sprite.svg#icon-icons8-voice-48"
                     ></use>
                   </svg>
                 </div>
                 <div class="voice-content">
-                  <p class="voice-text-en">
+                  <p class="activeHiMy">
                     Hi! <br />My name is Anna <br />
                     And you?
                   </p>
@@ -589,7 +595,7 @@
                 alt="woman-02"
               />
             </div>
-            <audio class="audio-hi" src="#" autoplay preload="auto"></audio>
+            <audio class="audio-hi-my" src="#" autoplay preload="auto"></audio>
 
             <!-- block-boy -->
             <div class="wapper-boy block">
@@ -602,33 +608,37 @@
               />
               <div class="music-block blue">
                 <div class="voice magrin-right">
-                  <svg class="btn-icon1 magrin-right" width="40" height="40">
+                  <svg
+                    class="audio-btn-11 btn-icon1 magrin-right"
+                    width="40"
+                    height="40"
+                  >
                     <use
                       href="./images/icons/icons-sprite.svg#icon-icons8-voice-48"
                     ></use>
                   </svg>
                 </div>
                 <div class="voice-content">
-                  <p class="voice-text-en">I am Kiril</p>
+                  <p class="activeIam">I am Kiril</p>
                   <p lang="uk">Я Кіріл</p>
                 </div>
               </div>
             </div>
 
-            <audio class="audio-hello" src="#" autoplay preload="auto"></audio>
+            <audio class="audio-i-am" src="#" autoplay preload="auto"></audio>
 
             <!-- block-girl -->
             <div class="wapper-girl block-girl">
               <div class="music-block yellow">
                 <div class="voice">
-                  <svg class="btn-icon2" width="40" height="40">
+                  <svg class="audio-btn-12 btn-icon2" width="40" height="40">
                     <use
                       href="./images/icons/icons-sprite.svg#icon-icons8-voice-48"
                     ></use>
                   </svg>
                 </div>
                 <div class="voice-content">
-                  <p class="voice-text-en">Nice to meet you!</p>
+                  <p class="activeNiceYou">Nice to meet you!</p>
                   <p lang="uk">Приємно познайомитись!</p>
                 </div>
               </div>
@@ -640,7 +650,12 @@
                 alt="woman-02"
               />
             </div>
-            <audio class="audio-hi" src="#" autoplay preload="auto"></audio>
+            <audio
+              class="audio-nice-you"
+              src="#"
+              autoplay
+              preload="auto"
+            ></audio>
 
             <!-- block-boy -->
             <div class="wapper-boy block">
@@ -653,23 +668,32 @@
               />
               <div class="music-block blue">
                 <div class="voice">
-                  <svg class="btn-icon1 magrin-right" width="40" height="40">
+                  <svg
+                    class="audio-btn-13 btn-icon1 magrin-right"
+                    width="40"
+                    height="40"
+                  >
                     <use
                       href="./images/icons/icons-sprite.svg#icon-icons8-voice-48"
                     ></use>
                   </svg>
                 </div>
                 <div class="voice-content">
-                  <p class="voice-text-en">Nice to meet you, too!</p>
+                  <p class="activeNiceToo">Nice to meet you, too!</p>
                   <p lang="uk">Я теж радий познайомитись!</p>
                 </div>
               </div>
             </div>
 
-            <audio class="audio-hello" src="#" autoplay preload="auto"></audio>
+            <audio
+              class="audio-nice-too"
+              src="#"
+              autoplay
+              preload="auto"
+            ></audio>
           </li>
           <li class="blue-color">
-            <h2>Практика на слух</h2>
+            <h2>Урок 6 Перевірка знань</h2>
             <p class="subtext" lang="uk">
               <span class="emoji">📌</span>Послухай та повтори
             </p>
@@ -684,33 +708,38 @@
               />
               <div class="music-block blue">
                 <div class="voice">
-                  <svg class="btn-icon1" width="40" height="40">
+                  <svg class="audio-btn-14 btn-icon1" width="40" height="40">
                     <use
                       href="./images/icons/icons-sprite.svg#icon-icons8-voice-48"
                     ></use>
                   </svg>
                 </div>
                 <div class="voice-content">
-                  <p class="voice-text-en">. . . ?</p>
+                  <p class="activeLessonBoy">. . . ?</p>
                   <!-- <p lang="uk">Привіт</p> -->
                 </div>
               </div>
             </div>
 
-            <audio class="audio-hello" src="#" autoplay preload="auto"></audio>
+            <audio
+              class="audio-lesson-boy"
+              src="#"
+              autoplay
+              preload="auto"
+            ></audio>
 
             <!-- block-girl -->
             <div class="wapper-girl">
               <div class="music-block yellow">
                 <div class="voice">
-                  <svg class="btn-icon2" width="40" height="40">
+                  <svg class="audio-btn-15 btn-icon2" width="40" height="40">
                     <use
                       href="./images/icons/icons-sprite.svg#icon-icons8-voice-48"
                     ></use>
                   </svg>
                 </div>
                 <div class="voice-content">
-                  <p class="voice-text-en">. . . ?</p>
+                  <p class="activeLessonGirl">. . . ?</p>
                   <!-- <p lang="uk">Привіт</p> -->
                 </div>
               </div>
@@ -723,15 +752,21 @@
               />
             </div>
 
-            <audio class="audio-hi" src="#" autoplay preload="auto"></audio>
+            <audio
+              class="audio-lesson-girl"
+              src="#"
+              autoplay
+              preload="auto"
+            ></audio>
 
             <p class="subtitle-write" lang="uk">
-              Спробуй написати <span class="emoji">✍️</span>
+              Спробуй написати по пам'яті <span class="emoji">✍️</span>
             </p>
 
             <form class="js-form">
               <label class="form-label">
                 <input
+                  autocomplete="off"
                   class="js-input input-boy"
                   type="text"
                   name="hello"
@@ -743,6 +778,7 @@
 
               <label>
                 <input
+                  autocomplete="off"
                   class="js-input2 input-boy"
                   type="text"
                   name="hi"
@@ -755,6 +791,7 @@
 
               <label class="form-label">
                 <input
+                  autocomplete="off"
                   class="js-input input-girl"
                   type="text"
                   name="hello"
@@ -766,6 +803,7 @@
 
               <label>
                 <input
+                  autocomplete="off"
                   class="js-input2 input-girl"
                   type="text"
                   name="hi"
@@ -778,6 +816,7 @@
 
               <label>
                 <input
+                  autocomplete="off"
                   class="js-input2 input-girl"
                   type="text"
                   name="hi"
@@ -819,33 +858,38 @@
               />
               <div class="music-block blue">
                 <div class="voice">
-                  <svg class="btn-icon1" width="40" height="40">
+                  <svg class="audio-btn-16 btn-icon1" width="40" height="40">
                     <use
                       href="./images/icons/icons-sprite.svg#icon-icons8-voice-48"
                     ></use>
                   </svg>
                 </div>
                 <div class="voice-content">
-                  <p class="voice-text-en">. . . ?</p>
+                  <p class="activeLessonBoy1">. . . ?</p>
                   <!-- <p lang="uk">Привіт</p> -->
                 </div>
               </div>
             </div>
 
-            <audio class="audio-hello" src="#" autoplay preload="auto"></audio>
+            <audio
+              class="audio-lesson-boy-1"
+              src="#"
+              autoplay
+              preload="auto"
+            ></audio>
 
             <!-- block-girl -->
             <div class="wapper-girl">
               <div class="music-block yellow">
                 <div class="voice">
-                  <svg class="btn-icon2" width="40" height="40">
+                  <svg class="audio-btn-17 btn-icon2" width="40" height="40">
                     <use
                       href="./images/icons/icons-sprite.svg#icon-icons8-voice-48"
                     ></use>
                   </svg>
                 </div>
                 <div class="voice-content">
-                  <p class="voice-text-en">. . . ?</p>
+                  <p class="activeLessonGirl1">. . . ?</p>
                   <!-- <p lang="uk">Привіт</p> -->
                 </div>
               </div>
@@ -858,7 +902,12 @@
               />
             </div>
 
-            <audio class="audio-hi" src="#" autoplay preload="auto"></audio>
+            <audio
+              class="audio-lesson-girl-1"
+              src="#"
+              autoplay
+              preload="auto"
+            ></audio>
 
             <!-- block-boy -->
             <div class="wapper-boy">
@@ -871,28 +920,34 @@
               />
               <div class="music-block blue">
                 <div class="voice">
-                  <svg class="btn-icon1" width="40" height="40">
+                  <svg class="audio-btn-18 btn-icon1" width="40" height="40">
                     <use
                       href="./images/icons/icons-sprite.svg#icon-icons8-voice-48"
                     ></use>
                   </svg>
                 </div>
                 <div class="voice-content">
-                  <p class="voice-text-en">. . . ?</p>
+                  <p class="activeLessonBoy2">. . . ?</p>
                   <!-- <p lang="uk">Привіт</p> -->
                 </div>
               </div>
             </div>
 
-            <audio class="audio-hello" src="#" autoplay preload="auto"></audio>
+            <audio
+              class="audio-lesson-boy-2"
+              src="#"
+              autoplay
+              preload="auto"
+            ></audio>
 
             <p class="subtitle-write" lang="uk">
-              Спробуй написати <span class="emoji">✍️</span>
+              Спробуй написати по пам'яті <span class="emoji">✍️</span>
             </p>
 
             <form class="js-form">
               <label class="form-label">
                 <input
+                  autocomplete="off"
                   class="js-input input-boy"
                   type="text"
                   name="hello"
@@ -904,6 +959,7 @@
 
               <label>
                 <input
+                  autocomplete="off"
                   class="js-input2 input-girl"
                   type="text"
                   name="hi"
@@ -916,6 +972,7 @@
 
               <label class="form-label">
                 <input
+                  autocomplete="off"
                   class="js-input input-boy"
                   type="text"
                   name="hello"

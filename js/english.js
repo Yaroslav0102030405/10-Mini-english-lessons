@@ -4,6 +4,20 @@ const refs = {
   activeHi: document.querySelector(".activeHi"),
   activeWhat: document.querySelector(".activeWhat"),
   activeMyName: document.querySelector(".activeMyName"),
+  activeAndYou: document.querySelector(".activeAndYou"),
+  activeKiril: document.querySelector(".activeKiril2"),
+  activeNice: document.querySelector(".activeNice"),
+  activeToo: document.querySelector(".activeToo"),
+  activeHelloWhat: document.querySelector(".activeHelloWhat"),
+  activeHiMy: document.querySelector(".activeHiMy"),
+  activeIam: document.querySelector(".activeIam"),
+  activeNiceYou: document.querySelector(".activeNiceYou"),
+  activeNiceToo: document.querySelector(".activeNiceToo"),
+  activeLessonBoy: document.querySelector(".activeLessonBoy"),
+  activeLessonGirl: document.querySelector(".activeLessonGirl"),
+  activeLessonBoy1: document.querySelector(".activeLessonBoy1"),
+  activeLessonGirl1: document.querySelector(".activeLessonGirl1"),
+  activeLessonBoy2: document.querySelector(".activeLessonBoy2"),
   iconBtn1: document.querySelector(".btn-icon1"),
   iconBtn1: document.querySelector(".btn-icon1"),
   iconBtn2: document.querySelector(".btn-icon2"),
@@ -27,23 +41,44 @@ const refs = {
   audioBtn3: document.querySelector(".audio-btn-3"),
   audioMyName: document.querySelector(".audio-mane-is"),
   audioBtn4: document.querySelector(".audio-btn-4"),
-  audioAndYou: document.querySelector(".audio-amd-you"),
+  audioAndYou: document.querySelector(".audio-and-you"),
   audioBtn5: document.querySelector(".audio-btn-5"),
-  audioIamKiril: document.querySelector(".audio-am-kiril"),
+  audioKiril: document.querySelector(".audio-kiril"),
   audioBtn6: document.querySelector(".audio-btn-6"),
+  audioNice: document.querySelector(".audio-nice"),
+  audioBtn7: document.querySelector(".audio-btn-7"),
+  audioToo: document.querySelector(".audio-too"),
+  audioBtn8: document.querySelector(".audio-btn-8"),
+  audioHelloWhat: document.querySelector(".audio-hello-what"),
+  audioBtn9: document.querySelector(".audio-btn-9"),
+  audioHiMy: document.querySelector(".audio-hi-my"),
+  audioBtn10: document.querySelector(".audio-btn-10"),
+  audioIam: document.querySelector(".audio-i-am"),
+  audioBtn11: document.querySelector(".audio-btn-11"),
+  audioNiceYou: document.querySelector(".audio-nice-you"),
+  audioBtn12: document.querySelector(".audio-btn-12"),
+  audioNiceToo: document.querySelector(".audio-nice-too"),
+  audioBtn13: document.querySelector(".audio-btn-13"),
+  audioLessonBoy: document.querySelector(".audio-lesson-boy"),
+  audioBtn14: document.querySelector(".audio-btn-14"),
+  audioLessonGirl: document.querySelector(".audio-lesson-girl"),
+  audioBtn15: document.querySelector(".audio-btn-15"),
+  audioLessonBoy1: document.querySelector(".audio-lesson-boy-1"),
+  audioBtn16: document.querySelector(".audio-btn-16"),
+  audioLessonGirl1: document.querySelector(".audio-lesson-girl-1"),
+  audioBtn17: document.querySelector(".audio-btn-17"),
+  audioLessonBoy2: document.querySelector(".audio-lesson-boy-2"),
+  audioBtn18: document.querySelector(".audio-btn-18"),
 };
 
 refs.iconBtn1.addEventListener("click", () => {
   refs.item1.src = "../audio/Привіт Мене звати Кі.mp3";
-  // refs.iconBtn1.style.display = "none";
   const textActive = refs.textColorWhite;
   onActiveText(textActive);
 });
 
 refs.audioBtn1.addEventListener("click", () => {
   refs.audioHello.src = "../audio/boy/Hello .mp3";
-  // refs.textColorWhite.classList.add("activeHello");
-  // const textHello = refs.activeHello;
   onActiveText(refs.activeHello);
 });
 
@@ -64,10 +99,72 @@ refs.audioBtn4.addEventListener("click", () => {
 
 refs.audioBtn5.addEventListener("click", () => {
   refs.audioAndYou.src = "../audio/girl/And you .mp3";
+  onActiveText(refs.activeAndYou);
 });
 
 refs.audioBtn6.addEventListener("click", () => {
-  refs.audioIamKiril.src = "../audio/boy/I am Kiril.mp3";
+  refs.audioKiril.src = "../audio/boy/I am Kiril.mp3";
+  onActiveText(refs.activeKiril);
+});
+
+refs.audioBtn7.addEventListener("click", () => {
+  refs.audioNice.src = "../audio/girl/Nice to meet you .mp3";
+  onActiveText(refs.activeNice);
+});
+
+refs.audioBtn8.addEventListener("click", () => {
+  refs.audioToo.src = "../audio/boy/Nice to meet you too.mp3";
+  onActiveText(refs.activeToo);
+});
+
+refs.audioBtn9.addEventListener("click", () => {
+  refs.audioHelloWhat.src = "../audio/boy/Hello What is your n.mp3";
+  onActiveText(refs.activeHelloWhat);
+});
+
+refs.audioBtn10.addEventListener("click", () => {
+  refs.audioHiMy.src = "../audio/girl/Hi My name is Anna A.mp3";
+  onActiveText(refs.activeHiMy);
+});
+
+refs.audioBtn11.addEventListener("click", () => {
+  refs.audioIam.src = "../audio/boy/I am Kiril.mp3";
+  onActiveText(refs.activeIam);
+});
+
+refs.audioBtn12.addEventListener("click", () => {
+  refs.audioNiceYou.src = "../audio/girl/Nice to meet you .mp3";
+  onActiveText(refs.activeNiceYou);
+});
+
+refs.audioBtn13.addEventListener("click", () => {
+  refs.audioNiceToo.src = "../audio/boy/Nice to meet you too.mp3";
+  onActiveText(refs.activeNiceToo);
+});
+
+refs.audioBtn14.addEventListener("click", () => {
+  refs.audioLessonBoy.src = "../audio/boy/Hello What is your n.mp3";
+  onActiveText(refs.activeLessonBoy);
+});
+
+refs.audioBtn15.addEventListener("click", () => {
+  refs.audioLessonGirl.src = "../audio/girl/Hi My name is Anna A.mp3";
+  onActiveText(refs.activeLessonGirl);
+});
+
+refs.audioBtn16.addEventListener("click", () => {
+  refs.audioLessonBoy1.src = "../audio/boy/I am Kiril.mp3";
+  onActiveText(refs.activeLessonBoy1);
+});
+
+refs.audioBtn17.addEventListener("click", () => {
+  refs.audioLessonGirl1.src = "../audio/girl/Nice to meet you .mp3";
+  onActiveText(refs.activeLessonGirl1);
+});
+
+refs.audioBtn18.addEventListener("click", () => {
+  refs.audioLessonBoy2.src = "../audio/boy/Nice to meet you too.mp3";
+  onActiveText(refs.activeLessonBoy2);
 });
 
 function onActiveText(active) {
