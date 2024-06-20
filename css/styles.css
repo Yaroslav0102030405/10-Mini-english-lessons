@@ -75,7 +75,6 @@ img {
 }
 
 li {
-  /* max-width: 330px; */
   list-style: none;
 }
 
@@ -149,10 +148,10 @@ li {
   flex-wrap: wrap;
 } */
 
-.list li {
+/* .list li {
   padding: 20px;
   width: 601px;
-}
+} */
 
 .js-form {
   display: block;
