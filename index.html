@@ -26,14 +26,24 @@
               <span class="emoji">📌</span>Послухай та повтори
             </p> -->
             <!-- block-boy -->
-            <div class="wapper-boy block">
-              <img
-                loading="lazy"
-                width="160"
-                height="257"
-                src="./images/boy3.png"
-                alt="image-boy"
-              />
+            <div class="wapper-boy block-2">
+              <div class="flex">
+                <img
+                  loading="lazy"
+                  width="150"
+                  height="247"
+                  src="./images/boy3.png"
+                  alt="image-boy"
+                />
+
+                <img
+                  loading="lazy"
+                  width="150"
+                  height="237"
+                  src="./images/girl3.png"
+                  alt="image-boy"
+                />
+              </div>
 
               <div class="music-block blue">
                 <div class="voice">
@@ -45,8 +55,8 @@
                 </div>
                 <div class="voice-content">
                   <p class="activeKiril">
-                    Привіт! Мене звати Кіріл. Я буду навчати тебе англійської
-                    мови
+                    Привіт! Мене звати Кіріл. А це Анна. Ми тебе будемо навчати
+                    англійської мови
                   </p>
                 </div>
               </div>
@@ -55,7 +65,7 @@
             <audio class="audio-start" src="#" autoplay preload="auto"></audio>
 
             <!-- block-girl -->
-            <div class="wapper-girl block-girl">
+            <!-- <div class="wapper-girl block-girl">
               <div class="music-block yellow">
                 <div class="voice">
                   <svg class="btn-icon2" width="40" height="40">
@@ -79,14 +89,49 @@
                 alt="image-boy"
               />
             </div>
-            <audio class="audio-hi" src="#" autoplay preload="auto"></audio>
+            <audio class="audio-hi" src="#" autoplay preload="auto"></audio> -->
             <h2>Ми тебе будемо навчати:</h2>
 
             <p>- розуміти англійську на слух</p>
             <p>- писати на англійській мові</p>
             <p>- розмовляти англійською</p>
           </li>
+          <li>
+            <div class="box-1">
+              <h2>Урок 1 <span>Hello!</span></h2>
+            </div>
+          </li>
+          <li>
+            <div class="box-1">
+              <h2>Урок 2 <span>What is your name?</span></h2>
+            </div>
+          </li>
+
+          <li>
+            <div class="box-1">
+              <h2>Урок 3 <span>And you? I am...</span></h2>
+            </div>
+          </li>
+
+          <li>
+            <div class="box-1">
+              <h2>Урок 4 <span>nice to meet you!</span></h2>
+            </div>
+          </li>
+          <li>
+            <div class="box-1">
+              <h2>Практика</h2>
+            </div>
+          </li>
+          <li>
+            <div class="box-1">
+              <h2>Перевірка знань</h2>
+            </div>
+          </li>
           <li class="list-item item-01 blue-color">
+            <!-- <div class="box-1">
+              <h2>Урок 1 <span>Hello!</span></h2>
+            </div> -->
             <h2 class="subtitle" lang="uk">Урок 1<span> Hello!</span></h2>
             <p class="subtext" lang="uk">
               <span class="emoji">📌</span>Послухай та повтори
@@ -969,7 +1014,123 @@
           </li>
         </ul>
       </div>
+
+      <div class="backdrop is-hidden">
+        <div class="modal">
+          <div class="item-01 blue-color">
+            <!-- <div class="box-1">
+              <h2>Урок 1 <span>Hello!</span></h2>
+            </div> -->
+            <h2 class="subtitle" lang="uk">Урок 1<span> Hello!</span></h2>
+            <p class="subtext" lang="uk">
+              <span class="emoji">📌</span>Послухай та повтори
+            </p>
+            <!-- block-boy -->
+            <div class="wapper-boy">
+              <img
+                loading="lazy"
+                width="100"
+                height="160"
+                src="./images/boy3.png"
+                alt="image-boy"
+              />
+              <div class="music-block blue">
+                <div class="voice">
+                  <svg class="audio-btn-1 btn-icon1" width="40" height="40">
+                    <use
+                      href="./images/icons/icons-sprite.svg#icon-icons8-voice-48"
+                    ></use>
+                  </svg>
+                </div>
+                <div class="voice-content">
+                  <p class="activeHello">Hello</p>
+                  <p lang="uk">Привіт</p>
+                </div>
+              </div>
+            </div>
+
+            <audio class="audio-hello" src="#" autoplay preload="auto"></audio>
+            <!-- block-girl -->
+            <div class="wapper-girl">
+              <div class="music-block yellow">
+                <div class="voice">
+                  <svg class="audio-btn-2 btn-icon1" width="40" height="40">
+                    <use
+                      href="./images/icons/icons-sprite.svg#icon-icons8-voice-48"
+                    ></use>
+                  </svg>
+                </div>
+                <div class="voice-content">
+                  <p class="activeHi">Hi</p>
+                  <p lang="uk">Привіт</p>
+                </div>
+              </div>
+              <img
+                loading="lazy"
+                width="100"
+                height="151"
+                src="./images/girl3.png"
+                alt="woman-02"
+              />
+            </div>
+
+            <audio class="audio-hi" src="#" autoplay preload="auto"></audio>
+
+            <p class="subtitle-write" lang="uk">
+              Спробуй написати <span class="emoji">✍️</span>
+            </p>
+
+            <form class="js-form">
+              <label class="form-label">
+                <input
+                  autocomplete="off"
+                  class="js-input input-boy"
+                  type="text"
+                  name="hello"
+                  placeholder="👦 Привіт по англійські"
+                  required
+                  data-hello="hello"
+                />
+              </label>
+
+              <label>
+                <input
+                  autocomplete="off"
+                  class="js-input2 yellow-2"
+                  type="text"
+                  name="hi"
+                  placeholder="👩 Привіт"
+                  maxlength="4"
+                  required
+                  data-hi="hi"
+                />
+              </label>
+
+              <button class="submit" type="submit">
+                Перевірити <span class="emoji">🤔</span>
+              </button>
+              <button class="closeModal">Закрити</button>
+
+              <p class="success"></p>
+              <audio
+                class="audio-answer"
+                src="#"
+                autoplay
+                preload="auto"
+              ></audio>
+
+              <audio
+                class="audio-answer-2"
+                src="#"
+                autoplay
+                preload="auto"
+              ></audio>
+            </form>
+          </div>
+        </div>
+      </div>
     </section>
+    <script src="./js/modal-01.js" type="module"></script>
     <script src="./js/english.js" type="module"></script>
   </body>
 </html>
