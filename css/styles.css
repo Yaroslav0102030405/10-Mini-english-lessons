@@ -363,8 +363,8 @@ input::placeholder {
 }
 
 .backdrop-1.is-hidden-1 .modal-1 {
-  /* transform: scale(0.5); */
-  transform: translate(-50%, -50%) scale(0.7);
+  transform: scale(0.5);
+  /* transform: translate(-50%, -50%) scale(0.7); */
 }
 
 .modal-1 {
