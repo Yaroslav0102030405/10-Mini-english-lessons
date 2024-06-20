@@ -12,11 +12,10 @@ body {
   font-optical-sizing: auto;
   font-weight: 400;
   font-style: normal;
-  background-color: blueviolet;
-  /* color: #f4c144; */
+
   color: #001d5f;
-  /* background-color: white; */
   background-color: white;
+  background-color: #446df4;
 
   margin: 0;
   padding: 0;
@@ -48,11 +47,17 @@ h2 {
 
 img {
   display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+li {
+  list-style: none;
 }
 
 .container {
-  /* padding-left: 15px;
-  padding-right: 15px; */
+  padding-left: 15px;
+  padding-right: 15px;
   margin: 0 auto;
 }
 
@@ -74,8 +79,14 @@ img {
   }
 }
 
-li {
-  list-style: none;
+.list {
+  margin-top: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+  gap: 30px;
 }
 
 /* item-1 */
@@ -99,6 +110,7 @@ li {
 }
 
 .music-block {
+  max-width: 503px;
   display: flex;
   background-color: transparent;
   margin-bottom: 10px;
@@ -164,13 +176,13 @@ li {
   justify-content: flex-end;
 }
 
-.blue-color {
+/* .blue-color {
   background-color: #446df4;
-}
+} */
 
-.yellow-color {
+/* .yellow-color {
   background-color: #f4c144;
-}
+} */
 
 .yellow {
   background-color: #f4c144;
@@ -318,44 +330,356 @@ input::placeholder {
   align-items: flex-end;
 }
 
+/* modal 1 ------------------------------------------- */
 .box-1 {
-  max-width: 380px;
+  width: 320px;
   padding-top: 10px;
   padding-bottom: 10px;
   background-color: #f4c144;
   border-radius: 10px;
 }
 
-.backdrop {
+@media screen and (min-width: 768px) {
+  .box-1 {
+    width: 500px;
+  }
+}
+
+.backdrop-1 {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
   background-color: rgba(255, 165, 0, 0.5);
+
+  opacity: 1;
+  transition: opacity 250ms linear;
 }
 
-.backdrop.is-hidden {
+.backdrop-1.is-hidden-1 {
   opacity: 0;
   pointer-events: none;
 }
 
-.modal {
+.backdrop-1.is-hidden-1 .modal-1 {
+  /* transform: scale(0.5); */
+  transform: translate(-50%, -50%) scale(0.7);
+}
+
+.modal-1 {
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  /* transform: translate(-50%, -50%); */
   padding: 15px;
 
   width: 100%;
   height: 100%;
 
-  background-color: #446df4;
+  background-color: white;
   overflow: auto;
+  /* pointer-events: none; */
+
+  transform: translate(-50%, -50%) scale(1);
+  transition: transform 250ms linear;
 }
 
 @media screen and (min-width: 768px) {
-  .modal {
+  .modal-1 {
+    width: 600px;
+  }
+}
+/* modal 2 ------------------------------------------- */
+.box-2 {
+  width: 320px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  background-color: #f4c144;
+  border-radius: 10px;
+}
+
+@media screen and (min-width: 768px) {
+  .box-2 {
+    width: 500px;
+  }
+}
+
+.backdrop-2 {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 165, 0, 0.5);
+
+  opacity: 1;
+  transition: opacity 250ms linear;
+}
+
+.backdrop-2.is-hidden-2 .modal-2 {
+  transform: translate(-50%, -50%) scale(0.7);
+}
+
+.backdrop-2.is-hidden-2 {
+  opacity: 0;
+  pointer-events: none;
+}
+.modal-2 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  /* transform: translate(-50%, -50%); */
+  padding: 15px;
+
+  width: 100%;
+  height: 100%;
+
+  background-color: white;
+  overflow: auto;
+  /* pointer-events: none; */
+
+  transform: translate(-50%, -50%) scale(1);
+  transition: transform 250ms linear;
+}
+
+@media screen and (min-width: 768px) {
+  .modal-2 {
+    width: 600px;
+  }
+}
+
+/* modal 3 ------------------------------------------- */
+.box-3 {
+  width: 320px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  background-color: #f4c144;
+  border-radius: 10px;
+}
+
+@media screen and (min-width: 768px) {
+  .box-3 {
+    width: 500px;
+  }
+}
+
+.backdrop-3 {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 165, 0, 0.5);
+
+  opacity: 1;
+  transition: opacity 250ms linear;
+}
+
+.backdrop-3.is-hidden-3 .modal-3 {
+  transform: translate(-50%, -50%) scale(0.7);
+}
+
+.backdrop-3.is-hidden-3 {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.modal-3 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  /* transform: translate(-50%, -50%); */
+  padding: 15px;
+
+  width: 100%;
+  height: 100%;
+
+  background-color: white;
+  overflow: auto;
+  /* pointer-events: none; */
+
+  transform: translate(-50%, -50%) scale(1);
+  transition: transform 250ms linear;
+}
+
+@media screen and (min-width: 768px) {
+  .modal-3 {
+    width: 600px;
+  }
+}
+
+/* modal 4 ------------------------------------------- */
+.box-4 {
+  width: 320px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  background-color: #f4c144;
+  border-radius: 10px;
+}
+
+@media screen and (min-width: 768px) {
+  .box-4 {
+    width: 500px;
+  }
+}
+
+.backdrop-4 {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 165, 0, 0.5);
+
+  opacity: 1;
+  transition: opacity 250ms linear;
+}
+
+.backdrop-4.is-hidden-4 .modal-4 {
+  transform: translate(-50%, -50%) scale(0.7);
+}
+
+.backdrop-4.is-hidden-4 {
+  opacity: 0;
+  pointer-events: none;
+}
+.modal-4 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  /* transform: translate(-50%, -50%); */
+  padding: 15px;
+
+  width: 100%;
+  height: 100%;
+
+  background-color: white;
+  overflow: auto;
+  /* pointer-events: none; */
+  transform: translate(-50%, -50%) scale(1);
+  transition: transform 250ms linear;
+}
+
+@media screen and (min-width: 768px) {
+  .modal-4 {
+    width: 600px;
+  }
+}
+
+/* modal 5 ------------------------------------------- */
+.box-5 {
+  width: 320px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  background-color: #f4c144;
+  border-radius: 10px;
+}
+
+@media screen and (min-width: 768px) {
+  .box-5 {
+    width: 500px;
+  }
+}
+
+.backdrop-5 {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 165, 0, 0.5);
+
+  opacity: 1;
+  transition: opacity 250ms linear;
+}
+
+.backdrop-5.is-hidden-5 .modal-5 {
+  transform: translate(-50%, -50%) scale(0.7);
+}
+
+.backdrop-5.is-hidden-5 {
+  opacity: 0;
+  pointer-events: none;
+}
+.modal-5 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  /* transform: translate(-50%, -50%); */
+  padding: 15px;
+
+  width: 100%;
+  height: 100%;
+
+  background-color: white;
+  overflow: auto;
+  /* pointer-events: none; */
+  transform: translate(-50%, -50%) scale(1);
+  transition: transform 250ms linear;
+}
+
+@media screen and (min-width: 768px) {
+  .modal-5 {
+    width: 600px;
+  }
+}
+
+/* modal 6 ------------------------------------------- */
+.box-6 {
+  width: 320px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  background-color: #f4c144;
+  border-radius: 10px;
+}
+
+@media screen and (min-width: 768px) {
+  .box-6 {
+    width: 500px;
+  }
+}
+
+.backdrop-6 {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 165, 0, 0.5);
+
+  opacity: 1;
+  transition: opacity 250ms linear;
+}
+
+.backdrop-6.is-hidden-6 .modal-6 {
+  transform: translate(-50%, -50%) scale(0.7);
+}
+
+.backdrop-6.is-hidden-6 {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.modal-6 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  /* transform: translate(-50%, -50%); */
+  padding: 15px;
+
+  width: 100%;
+  height: 100%;
+
+  background-color: white;
+  overflow: auto;
+  /* pointer-events: none; */
+  transform: translate(-50%, -50%) scale(1);
+  transition: transform 250ms linear;
+}
+
+@media screen and (min-width: 768px) {
+  .modal-6 {
     width: 600px;
   }
 }

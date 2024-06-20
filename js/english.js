@@ -1,3 +1,139 @@
+const openModal = document.querySelector(".box-1");
+const closeModal = document.querySelector(".closeModal-1");
+const backdrop = document.querySelector(".backdrop-1");
+
+openModal.addEventListener("click", onOpenModal);
+closeModal.addEventListener("click", onCloseModal);
+backdrop.addEventListener("click", onBackdrop);
+function onOpenModal() {
+  backdrop.classList.remove("is-hidden-1");
+}
+
+function onCloseModal() {
+  backdrop.classList.toggle("is-hidden-1");
+}
+
+function onBackdrop(e) {
+  if (e.currentTarget === e.target) {
+    backdrop.classList.toggle("is-hidden-1");
+  }
+}
+
+// Modal 2 ---------------
+const openModal2 = document.querySelector(".box-2");
+const closeModal2 = document.querySelector(".closeModal-2");
+const backdrop2 = document.querySelector(".backdrop-2");
+
+openModal2.addEventListener("click", onOpenModal2);
+closeModal2.addEventListener("click", onCloseModal2);
+backdrop2.addEventListener("click", onBackdrop2);
+
+function onOpenModal2() {
+  backdrop2.classList.remove("is-hidden-2");
+}
+
+function onCloseModal2() {
+  backdrop2.classList.toggle("is-hidden-2");
+}
+
+function onBackdrop2(e) {
+  if (e.currentTarget === e.target) {
+    backdrop2.classList.toggle("is-hidden-2");
+  }
+}
+
+// Modal 3 ---------------
+const openModal3 = document.querySelector(".box-3");
+const closeModal3 = document.querySelector(".closeModal-3");
+const backdrop3 = document.querySelector(".backdrop-3");
+
+openModal3.addEventListener("click", onOpenModal3);
+closeModal3.addEventListener("click", onCloseModal3);
+backdrop3.addEventListener("click", onBackdrop3);
+
+function onOpenModal3() {
+  backdrop3.classList.toggle("is-hidden-3");
+}
+
+function onCloseModal3() {
+  backdrop3.classList.toggle("is-hidden-3");
+}
+
+function onBackdrop3(e) {
+  if (e.currentTarget === e.target) {
+    backdrop3.classList.toggle("is-hidden-3");
+  }
+}
+
+// Modal 4 ---------------
+const openModal4 = document.querySelector(".box-4");
+const closeModal4 = document.querySelector(".closeModal-4");
+const backdrop4 = document.querySelector(".backdrop-4");
+
+openModal4.addEventListener("click", onOpenModal4);
+closeModal4.addEventListener("click", onCloseModal4);
+backdrop4.addEventListener("click", onBackdrop4);
+
+function onOpenModal4() {
+  backdrop4.classList.toggle("is-hidden-4");
+}
+
+function onCloseModal4() {
+  backdrop4.classList.toggle("is-hidden-4");
+}
+
+function onBackdrop4(e) {
+  if (e.currentTarget === e.target) {
+    backdrop4.classList.toggle("is-hidden-4");
+  }
+}
+
+// Modal 5 ---------------
+const openModal5 = document.querySelector(".box-5");
+const closeModal5 = document.querySelector(".closeModal-5");
+const backdrop5 = document.querySelector(".backdrop-5");
+
+openModal5.addEventListener("click", onOpenModal5);
+closeModal5.addEventListener("click", onCloseModal5);
+backdrop5.addEventListener("click", onBackdrop5);
+
+function onOpenModal5() {
+  backdrop5.classList.toggle("is-hidden-5");
+}
+
+function onCloseModal5() {
+  backdrop5.classList.toggle("is-hidden-5");
+}
+
+function onBackdrop5(e) {
+  if (e.currentTarget === e.target) {
+    backdrop5.classList.toggle("is-hidden-5");
+  }
+}
+
+// Modal 6 ---------------
+const openModal6 = document.querySelector(".box-6");
+const closeModal6 = document.querySelector(".closeModal-6");
+const backdrop6 = document.querySelector(".backdrop-6");
+
+openModal6.addEventListener("click", onOpenModal6);
+closeModal6.addEventListener("click", onCloseModal6);
+backdrop6.addEventListener("click", onBackdrop6);
+
+function onOpenModal6() {
+  backdrop6.classList.toggle("is-hidden-6");
+}
+
+function onCloseModal6() {
+  backdrop6.classList.toggle("is-hidden-6");
+}
+
+function onBackdrop6(e) {
+  if (e.currentTarget === e.target) {
+    backdrop6.classList.toggle("is-hidden-6");
+  }
+}
+
 const refs = {
   // додавання класу і white-color
   textColorWhite: document.querySelector(".activeKiril"),
