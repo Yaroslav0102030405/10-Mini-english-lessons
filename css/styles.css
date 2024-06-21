@@ -42,7 +42,7 @@ p {
 }
 
 h2 {
-  font-size: 25px;
+  font-size: 21px;
 }
 
 img {
@@ -90,7 +90,6 @@ li {
   gap: 30px;
 }
 
-/* item-1 */
 .wapper-boy {
   display: flex;
   align-items: center;
@@ -105,7 +104,7 @@ li {
   margin-top: 0;
   text-align: center;
   color: #001d5f;
-  font-size: 35px;
+  font-size: 26px;
 }
 
 .subtext {
@@ -157,17 +156,6 @@ li {
   background-color: white;
 }
 
-/* .list {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-} */
-
-/* .list li {
-  padding: 20px;
-  width: 601px;
-} */
-
 .js-form {
   display: block;
   margin: 0 auto;
@@ -179,24 +167,16 @@ li {
   justify-content: flex-end;
 }
 
-/* .blue-color {
-  background-color: #446df4;
-} */
-
-/* .yellow-color {
-  background-color: #f4c144;
-} */
-
 .yellow {
   background-color: #f4c144;
 }
 
 .yellow-2 {
-  border-bottom: 5px solid #ffd700;
+  border-bottom: 5px solid #f4c144;
 }
 
 .blue-2 {
-  border-bottom: 5px solid #0096ff;
+  border-bottom: 5px solid #446df4;
 }
 
 .icon-btn {
@@ -247,8 +227,13 @@ input {
   background-color: transparent;
   outline: none;
   margin-bottom: 10px;
-  color: white;
+  /* color: white; */
   font-size: 19px;
+  /* font-weight: bolder; */
+}
+.font-weight {
+  font-weight: bolder;
+  /* letter-spacing: 1px; */
 }
 
 input::placeholder {
@@ -256,16 +241,20 @@ input::placeholder {
 }
 
 .input-boy {
-  border-bottom: 5px solid blue;
+  border-bottom: 5px solid #446df4;
+}
+
+.input-color-boy {
+  color: #446df4;
+}
+
+.input-color-girl {
+  color: #f4c144;
 }
 
 .input-girl {
-  border-bottom: 5px solid yellow;
+  border-bottom: 5px solid #f4c144;
 }
-
-/* .item-01.gray3 {
-  background-color: tomato;
-} */
 
 .item-01.gray2 {
   background-color: #2ecc71;
@@ -286,10 +275,6 @@ input::placeholder {
 .item-color-06.green {
   background-color: #2ecc71;
 }
-
-/* .item-color-02.red {
-  background-color: tomato;
-} */
 
 .emoji {
   font-size: 20px;
@@ -315,18 +300,11 @@ input::placeholder {
 
 .voice-text-en {
   color: white;
-  /* text-shadow: 3px 4px 5px black; */
 }
 
 .voice {
   cursor: pointer;
 }
-/* 
-.image-boy {
-  border-radius: 50px;
-  border: 3px solid gray;
-  overflow: hidden;
-} */
 
 .flex {
   display: flex;
@@ -337,9 +315,7 @@ input::placeholder {
   width: 44px;
   height: 44px;
   display: block;
-  /* margin-right: auto; */
   margin-left: auto;
-  /* padding: 3px 15px; */
   border: none;
   border-radius: 50%;
   font-size: 24px;
@@ -419,20 +395,6 @@ input::placeholder {
   }
 }
 /* modal 2 ------------------------------------------- */
-/* .box-2 {
-  width: 320px;
-  padding-top: 10px;
-  padding-bottom: 10px;
-  background-color: #446df4;
-  border-radius: 10px;
-} */
-
-/* @media screen and (min-width: 768px) {
-  .box-2 {
-    width: 500px;
-  }
-} */
-
 .backdrop-2 {
   position: fixed;
   top: 0;
@@ -478,20 +440,6 @@ input::placeholder {
 }
 
 /* modal 3 ------------------------------------------- */
-/* .box-3 {
-  width: 320px;
-  padding-top: 10px;
-  padding-bottom: 10px;
-  background-color: #446df4;
-  border-radius: 10px;
-}
-
-@media screen and (min-width: 768px) {
-  .box-3 {
-    width: 500px;
-  }
-} */
-
 .backdrop-3 {
   position: fixed;
   top: 0;
@@ -538,20 +486,6 @@ input::placeholder {
 }
 
 /* modal 4 ------------------------------------------- */
-/* .box-4 {
-  width: 320px;
-  padding-top: 10px;
-  padding-bottom: 10px;
-  background-color: #446df4;
-  border-radius: 10px;
-}
-
-@media screen and (min-width: 768px) {
-  .box-4 {
-    width: 500px;
-  }
-} */
-
 .backdrop-4 {
   position: fixed;
   top: 0;
@@ -596,20 +530,6 @@ input::placeholder {
 }
 
 /* modal 5 ------------------------------------------- */
-/* .box-5 {
-  width: 320px;
-  padding-top: 10px;
-  padding-bottom: 10px;
-  background-color: #446df4;
-  border-radius: 10px;
-}
-
-@media screen and (min-width: 768px) {
-  .box-5 {
-    width: 500px;
-  }
-} */
-
 .backdrop-5 {
   position: fixed;
   top: 0;
@@ -654,20 +574,6 @@ input::placeholder {
 }
 
 /* modal 6 ------------------------------------------- */
-/* .box-6 {
-  width: 320px;
-  padding-top: 10px;
-  padding-bottom: 10px;
-  background-color: #446df4;
-  border-radius: 10px;
-}
-
-@media screen and (min-width: 768px) {
-  .box-6 {
-    width: 500px;
-  }
-} */
-
 .backdrop-6 {
   position: fixed;
   top: 0;
