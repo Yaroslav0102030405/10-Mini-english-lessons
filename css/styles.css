@@ -42,7 +42,7 @@ p {
 }
 
 h2 {
-  font-size: 21px;
+  font-size: 18px;
 }
 
 img {
@@ -77,6 +77,20 @@ li {
   .container {
     width: 1200px;
   }
+}
+
+.students-diary {
+  padding: 10px;
+  border: 2px solid black;
+  border-radius: 10px;
+  width: 180px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 50px;
+}
+
+.students-diary li p {
+  text-align: start;
 }
 
 .list {

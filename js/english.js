@@ -194,12 +194,16 @@ const refs = {
   btnSubmit4: document.querySelector(".submit-04"),
   itemColor4: document.querySelector(".item-color-04"),
   // форма 5
-  // formSubmit05: document.querySelector(".js-form-5"),
-  // inputNice: document.querySelector(".js-input-5"),
-  // inputToo: document.querySelector(".js-input-06"),
-  // audioSrc5: document.querySelector(".audio-answer6"),
-  // btnSubmit5: document.querySelector(".submit-05"),
+  formSubmit05: document.querySelector(".js-form-5"),
+  inputHello5: document.querySelector(".js-input-5"),
+  inputWhat05: document.querySelector(".js-input-51"),
+  inputHi52: document.querySelector(".js-input-52"),
+  inputMy5: document.querySelector(".js-input-53"),
+  inputAnd5: document.querySelector(".js-input-54"),
+  audioSrc5: document.querySelector(".audio-answer6"),
+  btnSubmit5: document.querySelector(".submit-05"),
   // itemColor5: document.querySelector(".item-color-05"),
+
   // зміна аудіо src
   audioHello: document.querySelector(".audio-hello"),
   audioBtn1: document.querySelector(".audio-btn-1"),
@@ -237,6 +241,22 @@ const refs = {
   audioBtn17: document.querySelector(".audio-btn-17"),
   audioLessonBoy2: document.querySelector(".audio-lesson-boy-2"),
   audioBtn18: document.querySelector(".audio-btn-18"),
+
+  // урок1
+  box1: document.querySelector(".js-box-1"),
+  boxTitle: document.querySelector(".boxtitle-1"),
+  box2: document.querySelector(".js-box-2"),
+  boxTitle2: document.querySelector(".boxtitle-2"),
+  box3: document.querySelector(".js-box-3"),
+  boxTitle3: document.querySelector(".boxtitle-3"),
+  box4: document.querySelector(".js-box-4"),
+  boxTitle4: document.querySelector(".boxtitle-4"),
+
+  // lesson
+  lesson1: document.querySelector(".lesson-1"),
+  lesson2: document.querySelector(".lesson-2"),
+  lesson3: document.querySelector(".lesson-3"),
+  lesson4: document.querySelector(".lesson-4"),
 };
 
 // додавання аудіо та зміна кольору
@@ -358,24 +378,24 @@ function onFormSubmit(e) {
     (hello === "hello ✔️" && hi === "Hi ✔️")
   ) {
     onAudioSuccess();
-    refs.item01.classList.add("gray2");
+    // refs.item01.classList.add("gray2");
+    refs.box1.style.backgroundColor = "#2ecc71";
+    refs.boxTitle.textContent = "Урок 1 Hello! ✔️";
+    refs.lesson1.textContent = "Урок 1: ⭐";
     markupSuccess();
   } else if (hello === "Hello ✔️" || hello === "hello ✔️") {
     onAudioError();
     onSmileyError(refs.inputEl2);
     markupError();
-    // refs.item01.classList.add("gray3");
   } else if (hi === "Hi ✔️" || hi === "hi ✔️") {
     onAudioError();
     onSmileyError(refs.inputEl);
     markupError();
-    // refs.item01.classList.add("gray3");
   } else {
     onSmileyError(refs.inputEl);
     onSmileyError(refs.inputEl2);
     onAudioError();
     markupError();
-    // refs.item01.classList.add("gray3");
   }
 }
 
@@ -389,13 +409,13 @@ const onAudioError = () => {
 
 // markup
 const markupSuccess = () => {
-  refs.btnSubmit.textContent = "✔️ Правильно";
+  refs.btnSubmit.textContent = "Правильно! 👍";
   refs.btnSubmit.style.backgroundColor = "#2ecc71";
   // refs.item01.classList.add("gray2");
 };
 
 const markupError = () => {
-  refs.btnSubmit.textContent = "❌ Не правильно";
+  refs.btnSubmit.textContent = "Не правильно 🙄";
   refs.btnSubmit.style.backgroundColor = "tomato";
 };
 
@@ -446,7 +466,10 @@ function onFormSubmit02(e) {
   ) {
     // onAudioSuccess();
     refs.audioSrc2.src = "../audio/Правильна відповідь .mp3";
-    refs.itemColor.classList.add("green");
+    // refs.itemColor.classList.add("green");
+    refs.box2.style.backgroundColor = "#2ecc71";
+    refs.boxTitle2.textContent = "Урок 2 What is your name? ✔️";
+    refs.lesson2.textContent = "Урок 2: ⭐";
     markupSuccess1();
   } else if (
     what === "What is your name ✔️" ||
@@ -478,13 +501,13 @@ function onFormSubmit02(e) {
 
 // markup
 const markupSuccess1 = () => {
-  refs.btnSubmit2.textContent = "✔️ Правильно";
+  refs.btnSubmit2.textContent = "Правильно! 👍";
   refs.btnSubmit2.style.backgroundColor = "#2ecc71";
   // refs.item01.classList.add("gray2");
 };
 
 const markupError1 = () => {
-  refs.btnSubmit2.textContent = "❌ Не правильно";
+  refs.btnSubmit2.textContent = "Не правильно 🙄";
   refs.btnSubmit2.style.backgroundColor = "tomato";
 };
 
@@ -535,7 +558,11 @@ function onFormSubmit03(e) {
   ) {
     // onAudioSuccess();
     refs.audioSrc3.src = "../audio/Правильна відповідь .mp3";
-    refs.itemColor3.classList.add("green");
+    // refs.itemColor3.classList.add("green");
+
+    refs.box3.style.backgroundColor = "#2ecc71";
+    refs.boxTitle3.textContent = "Урок 3 And you? I am... ✔️";
+    refs.lesson3.textContent = "Урок 3: ⭐";
     markupSuccess3();
   } else if (andYou === "And you ✔️" || andYou === "and you ✔️") {
     // onAudioError();
@@ -561,13 +588,14 @@ function onFormSubmit03(e) {
 
 // markup
 const markupSuccess3 = () => {
-  refs.btnSubmit3.textContent = "✔️ Правильно";
+  refs.btnSubmit3.textContent = "Правильно! 👍";
   refs.btnSubmit3.style.backgroundColor = "#2ecc71";
   // refs.item01.classList.add("gray2");
+  // refs.btnSubmit3.textContent = "✔️ Правильно";
 };
 
 const markupError3 = () => {
-  refs.btnSubmit3.textContent = "❌ Не правильно";
+  refs.btnSubmit3.textContent = "Не правильно 🙄";
   refs.btnSubmit3.style.backgroundColor = "tomato";
 };
 
@@ -618,7 +646,10 @@ function onFormSubmit04(e) {
   ) {
     // onAudioSuccess();
     refs.audioSrc4.src = "../audio/Правильна відповідь .mp3";
-    refs.itemColor4.classList.add("green");
+    // refs.itemColor4.classList.add("green");
+    refs.box4.style.backgroundColor = "#2ecc71";
+    refs.boxTitle4.textContent = "Урок 1 Nice to meet you! ✔️";
+    refs.lesson4.textContent = "Урок 4: ⭐";
     markupSuccess4();
   } else if (nice === "Nice to meet you ✔️" || nice === "nice to meet you ✔️") {
     // onAudioError();
@@ -647,13 +678,13 @@ function onFormSubmit04(e) {
 
 // markup
 const markupSuccess4 = () => {
-  refs.btnSubmit4.textContent = "✔️ Правильно";
+  refs.btnSubmit4.textContent = "Правильно! 👍";
   refs.btnSubmit4.style.backgroundColor = "#2ecc71";
   // refs.item01.classList.add("gray2");
 };
 
 const markupError4 = () => {
-  refs.btnSubmit4.textContent = "❌ Не правильно";
+  refs.btnSubmit4.textContent = "Не правильно 🙄";
   refs.btnSubmit4.style.backgroundColor = "tomato";
 };
 
@@ -687,87 +718,188 @@ const onSmileyError4 = (inputError) => {
 };
 
 // форма 6 ----------------------------------------------------------------
-// refs.formSubmit05.addEventListener("submit", onFormSubmit05);
-// refs.inputNice.addEventListener("input", onInpu5);
-// refs.inputToo.addEventListener("input", onInput05);
+refs.formSubmit05.addEventListener("submit", onFormSubmit05);
+refs.inputHello5.addEventListener("input", onInput5);
+refs.inputWhat05.addEventListener("input", onInput05);
+refs.inputHi52.addEventListener("input", onInputHi5);
+refs.inputMy5.addEventListener("input", onInputMy5);
+refs.inputAnd5.addEventListener("input", onInputAnd5);
+// refs.inputSrc5.addEventListener("input");
+// refs.inputSubmit5.addEventListener("input");
 
-// function onFormSubmit04(e) {
-//   e.preventDefault();
-//   const nice = refs.inputNice.value;
-//   const too = refs.inputToo.value;
+function onFormSubmit05(e) {
+  e.preventDefault();
+  const hello5 = refs.inputHello5.value;
+  const what5 = refs.inputWhat05.value;
+  const hi5 = refs.inputHi52.value;
+  const my5 = refs.inputMy5.value;
+  const and5 = refs.inputAnd5.value;
 
-//   if (
-//     (nice === "Nice to meet you ✔️" && too === "Nice to meet you too ✔️") ||
-//     (nice === "nice to meet you ✔️" && too === "nice to meet you too ✔️") ||
-//     (nice === "Nice to meet you ✔️" && too === "nice to meet you too ✔️") ||
-//     (nice === "nice to meet you ✔️" && too === "Nice to meet you too ✔️")
-//   ) {
-//     // onAudioSuccess();
-//     refs.audioSrc4.src = "../audio/Правильна відповідь .mp3";
-//     refs.itemColor4.classList.add("green");
-//     markupSuccess4();
-//   } else if (nice === "Nice to meet you ✔️" || nice === "nice to meet you ✔️") {
-//     // onAudioError();
-//     refs.audioSrc4.src = "../audio/Відповідь неправильн.mp3";
-//     onSmileyError4(refs.inputToo);
-//     markupError4();
-//     // refs.itemColor.classList.add("red");
-//   } else if (
-//     too === "Nice to meet you too ✔️" ||
-//     too === "nice to meet you too ✔️"
-//   ) {
-//     // onAudioError();
-//     refs.audioSrc4.src = "../audio/Відповідь неправильн.mp3";
-//     onSmileyError4(refs.inputNice);
-//     markupError4();
-//     // refs.itemColor.classList.add("red");
-//   } else {
-//     onSmileyError4(refs.inputNice);
-//     onSmileyError4(refs.inputToo);
-//     // onAudioError();
-//     refs.audioSrc3.src = "../audio/Відповідь неправильн.mp3";
-//     markupError4();
-//     // refs.itemColor.classList.add("red");
-//   }
-// }
+  if (
+    (hello5 === "Hello ✔️" &&
+      what5 === "What is your name ✔️" &&
+      hi5 === "Hi ✔️" &&
+      my5 === "My name is Anna ✔️" &&
+      and5 === "And you ✔️") ||
+    (hello5 === "hello ✔️" &&
+      what5 === "what is your name ✔️" &&
+      hi5 === "hi ✔️" &&
+      my5 === "my name is anna ✔️" &&
+      and5 === "and you ✔️")
+  ) {
+    refs.audioSrc4.src = "../audio/Правильна відповідь .mp3";
+    markupSuccess5();
+  } else if (hello5 === "Hello ✔️" || hello5 === "hello ✔️") {
+    refs.audioSrc4.src = "../audio/Відповідь неправильн.mp3";
+    // onSmileyError5(refs.inputHello5);
+    onSmileyError5(refs.inputWhat05);
+    onSmileyError5(refs.inputHi52);
+    onSmileyError5(refs.inputMy5);
+    onSmileyError5(refs.inputAnd5);
+    markupError5();
+  } else if (
+    what5 === "What is your name ✔️" ||
+    what5 === "what is your name ✔️"
+  ) {
+    refs.audioSrc4.src = "../audio/Відповідь неправильн.mp3";
+    onSmileyError5(refs.inputHello5);
+    // onSmileyError5(refs.inputWhat05);
+    onSmileyError5(refs.inputHi52);
+    onSmileyError5(refs.inputMy5);
+    onSmileyError5(refs.inputAnd5);
+    markupError5();
+  } else if (hi5 === "Hi ✔️" || hi5 === "hi ✔️") {
+    refs.audioSrc4.src = "../audio/Відповідь неправильн.mp3";
+    onSmileyError5(refs.inputHello5);
+    onSmileyError5(refs.inputWhat05);
+    //  onSmileyError5(refs.inputHi52);
+    onSmileyError5(refs.inputMy5);
+    onSmileyError5(refs.inputAnd5);
+    markupError5();
+  } else if (my5 === "My name is Anna ✔️" || my5 === "my name is anna ✔️") {
+    refs.audioSrc4.src = "../audio/Відповідь неправильн.mp3";
+    onSmileyError5(refs.inputHello5);
+    onSmileyError5(refs.inputWhat05);
+    onSmileyError5(refs.inputHi52);
+    // onSmileyError5(refs.inputMy5);
+    onSmileyError5(refs.inputAnd5);
+    markupError5();
+  } else if (and5 === "And you ✔️" || and5 === "and you ✔️") {
+    refs.audioSrc4.src = "../audio/Відповідь неправильн.mp3";
+    onSmileyError5(refs.inputHello5);
+    onSmileyError5(refs.inputWhat05);
+    onSmileyError5(refs.inputHi52);
+    onSmileyError5(refs.inputMy5);
+    // onSmileyError5(refs.inputAnd5);
+    markupError5();
+  } else if (
+    // (hello5 === "Hello ✔️" && what5 === "What is your name ✔️") ||
+    // (hello5 === "hello ✔️" && what5 === "what is your name ✔️")
 
-// // markup
-// const markupSuccess4 = () => {
-//   refs.btnSubmit4.textContent = "✔️ Правильно";
-//   refs.btnSubmit4.style.backgroundColor = "#2ecc71";
-//   // refs.item01.classList.add("gray2");
-// };
+    hello5 === "Hello ✔️" ||
+    (hello5 === "hello ✔️" && what5 === "What is your name") ||
+    what5 === "what is your name ✔️"
+  ) {
+    refs.audioSrc4.src = "../audio/Відповідь неправильн.mp3";
+    // onSmileyError5(refs.inputHello5);
+    // onSmileyError5(refs.inputWhat05);
+    onSmileyError5(refs.inputHi52);
+    onSmileyError5(refs.inputMy5);
+    onSmileyError5(refs.inputAnd5);
+    markupError5();
+  } else if (
+    (hello5 === "Hello ✔️" &&
+      what5 === "What is your name ✔️" &&
+      hi5 === "Hi ✔️") ||
+    (hello5 === "hello ✔️" &&
+      what5 === "what is your name ✔️" &&
+      hi5 === "hi ✔️")
+  ) {
+    refs.audioSrc4.src = "../audio/Відповідь неправильн.mp3";
+    // onSmileyError5(refs.inputHello5);
+    // onSmileyError5(refs.inputWhat05);
+    // onSmileyError5(refs.inputHi52);
+    onSmileyError5(refs.inputMy5);
+    onSmileyError5(refs.inputAnd5);
+    markupError5();
+  } else {
+    onSmileyError5(refs.inputHello5);
+    onSmileyError5(refs.inputWhat05);
+    onSmileyError5(refs.inputHi52);
+    onSmileyError5(refs.inputMy5);
+    onSmileyError5(refs.inputAnd5);
+    refs.audioSrc3.src = "../audio/Відповідь неправильн.mp3";
+    markupError5();
+  }
+}
 
-// const markupError4 = () => {
-//   refs.btnSubmit4.textContent = "❌ Не правильно";
-//   refs.btnSubmit4.style.backgroundColor = "tomato";
-// };
+// markup
+const markupSuccess5 = () => {
+  refs.btnSubmit5.textContent = "Правильно! 👍";
+  refs.btnSubmit5.style.backgroundColor = "#2ecc71";
+  // refs.item01.classList.add("gray2");
+};
 
-// // input-1
-// function onInput4(event) {
-//   if (
-//     event.currentTarget.value === "Nice to meet you" ||
-//     event.currentTarget.value === "nice to meet you"
-//   ) {
-//     onSmileySuccess4(refs.inputNice);
-//   }
-// }
+const markupError5 = () => {
+  refs.btnSubmit5.textContent = "Не правильно 🙄";
+  refs.btnSubmit5.style.backgroundColor = "tomato";
+};
 
-// // inpup-2
-// function onInput04(event) {
-//   if (
-//     event.currentTarget.value === "Nice to meet you too" ||
-//     event.currentTarget.value === "nice to meet you too"
-//   ) {
-//     onSmileySuccess4(refs.inputToo);
-//   }
-// }
+// input-1
+function onInput5(event) {
+  if (
+    event.currentTarget.value === "Hello" ||
+    event.currentTarget.value === "hello"
+  ) {
+    onSmileySuccess5(refs.inputHello5);
+  }
+}
 
-// // emoji success and error
-// const onSmileySuccess4 = (inputSuccess) => {
-//   inputSuccess.value = `${inputSuccess.value} ✔️`;
-// };
+// inpup-2
+function onInput05(event) {
+  if (
+    event.currentTarget.value === "What is your name" ||
+    event.currentTarget.value === "what is your name"
+  ) {
+    onSmileySuccess5(refs.inputWhat05);
+  }
+}
 
-// const onSmileyError4 = (inputError) => {
-//   inputError.value = `${inputError.value} ❌`;
-// };
+// input-3
+function onInputHi5(event) {
+  if (
+    event.currentTarget.value === "Hi" ||
+    event.currentTarget.value === "hi"
+  ) {
+    onSmileySuccess5(refs.inputHi52);
+  }
+}
+
+// inpup-4
+function onInputMy5(event) {
+  if (
+    event.currentTarget.value === "My name is Anna" ||
+    event.currentTarget.value === "my name is anna"
+  ) {
+    onSmileySuccess5(refs.inputMy5);
+  }
+}
+
+// input 5
+function onInputAnd5(event) {
+  if (
+    event.currentTarget.value === "And you" ||
+    event.currentTarget.value === "and you"
+  ) {
+    onSmileySuccess5(refs.inputAnd5);
+  }
+}
+
+// emoji success and error
+const onSmileySuccess5 = (inputSuccess) => {
+  inputSuccess.value = `${inputSuccess.value} ✔️`;
+};
+
+const onSmileyError5 = (inputError) => {
+  inputError.value = `${inputError.value} ❌`;
+};
