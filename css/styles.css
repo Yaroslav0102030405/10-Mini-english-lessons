@@ -399,7 +399,7 @@ input::placeholder {
   height: 100%;
 
   background-color: white;
-  /* overflow: auto; */
+  overflow: auto;
   /* pointer-events: none; */
 
   transform: translate(-50%, -50%) scale(1);
