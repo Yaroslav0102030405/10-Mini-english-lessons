@@ -132,7 +132,7 @@ li {
   background-color: transparent;
   margin-bottom: 10px;
   align-items: center;
-  padding: 10px 20px;
+  padding: 5px 10px;
   border-radius: 8px;
   font-size: 20px;
   box-shadow: 10px 5px 5px black;
@@ -335,12 +335,13 @@ input::placeholder {
   border-radius: 50%;
   font-size: 24px;
   color: white;
-  background: #446df4;
+  /* background: #446df4; */
 }
 
 .closeModal-0:focus,
 .closeModal-0:hover {
-  background-color: #f4c144;
+  /* background-color: #f4c144; */
+  background-color: #2ecc71;
 }
 
 /* modal 1 ------------------------------------------- */
