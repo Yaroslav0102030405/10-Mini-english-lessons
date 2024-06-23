@@ -134,6 +134,29 @@ function onBackdrop6(e) {
   }
 }
 
+// Modal 7 ---------------
+const openModal7 = document.querySelector(".diary");
+const closeModal7 = document.querySelector(".closeModal-7");
+const backdrop7 = document.querySelector(".backdrop-7");
+
+openModal7.addEventListener("click", onOpenModal7);
+closeModal7.addEventListener("click", onCloseModal7);
+backdrop7.addEventListener("click", onBackdrop7);
+
+function onOpenModal7() {
+  backdrop7.classList.toggle("is-hidden-7");
+}
+
+function onCloseModal7() {
+  backdrop7.classList.toggle("is-hidden-7");
+}
+
+function onBackdrop7(e) {
+  if (e.currentTarget === e.target) {
+    backdrop7.classList.toggle("is-hidden-7");
+  }
+}
+
 const refs = {
   // додавання класу і white-color
   textColorWhite: document.querySelector(".activeKiril"),

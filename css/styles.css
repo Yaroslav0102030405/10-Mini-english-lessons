@@ -79,6 +79,15 @@ li {
   }
 }
 
+.diary {
+  width: 40px;
+  height: 40px;
+  border: none;
+  background: none;
+  display: block;
+  margin-left: auto;
+}
+
 .students-diary {
   padding: 10px;
   border: 2px solid black;
@@ -636,6 +645,59 @@ input::placeholder {
 
 @media screen and (min-width: 768px) {
   .modal-6 {
+    width: 600px;
+  }
+}
+
+/* Щоденник */
+.backdrop-7 {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 165, 0, 0.5);
+
+  /* opacity: 1; */
+  transition: opacity 350ms linear;
+}
+
+.backdrop-7.is-hidden-7 .modal-7 {
+  /* transform: translate(-50%, -50%) scale(0.7); */
+  transform: translateX(100%);
+}
+
+.backdrop-7.is-hidden-7 {
+  opacity: 0;
+  pointer-events: none;
+}
+.modal-7 {
+  position: absolute;
+  /* top: 50%;
+  left: 50%; */
+  /* top: 0; */
+  right: 0;
+  /* left: 0; */
+  /* transform: translate(-50%, -50%); */
+  padding: 15px;
+
+  /* width: 100%; */
+  height: 100%;
+
+  background-color: white;
+  overflow: auto;
+  /* pointer-events: none; */
+  /* transform: translate(-50%, -50%) scale(1); */
+  transform: translateX(0);
+  /* white-space: nowrap;
+  overflow: hidden; */
+  background-color: #446df4;
+
+  transition: transform 250ms linear;
+}
+
+@media screen and (min-width: 768px) {
+  .modal-7 {
     width: 600px;
   }
 }
