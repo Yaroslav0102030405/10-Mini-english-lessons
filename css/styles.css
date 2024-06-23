@@ -336,12 +336,13 @@ input::placeholder {
   font-size: 24px;
   color: white;
   /* background: #446df4; */
+  background-color: #2ecc71;
 }
 
 .closeModal-0:focus,
 .closeModal-0:hover {
-  /* background-color: #f4c144; */
-  background-color: #2ecc71;
+  background-color: #f4c144;
+  /* background-color: #2ecc71; */
 }
 
 /* modal 1 ------------------------------------------- */
@@ -398,7 +399,7 @@ input::placeholder {
   height: 100%;
 
   background-color: white;
-  overflow: auto;
+  /* overflow: auto; */
   /* pointer-events: none; */
 
   transform: translate(-50%, -50%) scale(1);
