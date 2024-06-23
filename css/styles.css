@@ -333,15 +333,15 @@ input::placeholder {
   width: 44px;
   height: 44px;
   display: block;
-  margin-left: auto;
-  /* margin-right: auto; */
-  border: none;
+  /* margin-left: auto; */
+  margin-right: auto;
+  /* border: none; */
   border-radius: 50%;
   font-size: 24px;
-  color: white;
+  /* color: white; */
   cursor: pointer;
 
-  background-color: #e5e4e2;
+  /* background-color: #e5e4e2; */
 }
 
 .closeModal-0:focus,
