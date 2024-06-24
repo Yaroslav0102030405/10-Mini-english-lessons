@@ -701,3 +701,9 @@ input::placeholder {
     width: 600px;
   }
 }
+
+.btn-start {
+  margin-bottom: 30px;
+  cursor: pointer;
+  background-color: tomato;
+}

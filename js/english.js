@@ -135,27 +135,27 @@ function onBackdrop6(e) {
 }
 
 // Modal 7 ---------------
-const openModal7 = document.querySelector(".diary");
-const closeModal7 = document.querySelector(".closeModal-7");
-const backdrop7 = document.querySelector(".backdrop-7");
+// const openModal7 = document.querySelector(".diary");
+// const closeModal7 = document.querySelector(".closeModal-7");
+// const backdrop7 = document.querySelector(".backdrop-7");
 
-openModal7.addEventListener("click", onOpenModal7);
-closeModal7.addEventListener("click", onCloseModal7);
-backdrop7.addEventListener("click", onBackdrop7);
+// openModal7.addEventListener("click", onOpenModal7);
+// closeModal7.addEventListener("click", onCloseModal7);
+// backdrop7.addEventListener("click", onBackdrop7);
 
-function onOpenModal7() {
-  backdrop7.classList.toggle("is-hidden-7");
-}
+// function onOpenModal7() {
+//   backdrop7.classList.toggle("is-hidden-7");
+// }
 
-function onCloseModal7() {
-  backdrop7.classList.toggle("is-hidden-7");
-}
+// function onCloseModal7() {
+//   backdrop7.classList.toggle("is-hidden-7");
+// }
 
-function onBackdrop7(e) {
-  if (e.currentTarget === e.target) {
-    backdrop7.classList.toggle("is-hidden-7");
-  }
-}
+// function onBackdrop7(e) {
+//   if (e.currentTarget === e.target) {
+//     backdrop7.classList.toggle("is-hidden-7");
+//   }
+// }
 
 const refs = {
   // додавання класу і white-color
@@ -313,6 +313,8 @@ const refs = {
   lesson3: document.querySelector(".lesson-3"),
   lesson4: document.querySelector(".lesson-4"),
   lesson6: document.querySelector(".lesson-6"),
+
+  btnStart: document.querySelector(".btn-start"),
 };
 
 // додавання аудіо та зміна кольору
@@ -451,9 +453,14 @@ function onFormSubmit(e) {
   ) {
     onAudioSuccess();
     // refs.item01.classList.add("gray2");
-    refs.box1.style.backgroundColor = "#2ecc71";
-    refs.boxTitle.textContent = "Урок 1 Hello! ✔️";
-    refs.lesson1.textContent = "Урок 1: ⭐";
+    // refs.box1.style.backgroundColor = "#2ecc71";
+    // refs.boxTitle.textContent = "Урок 1 Hello! ✔️";
+    // refs.lesson1.textContent = "Урок 1: ⭐";
+
+    localStorage.setItem("btn2Background1", "#2ecc71");
+    localStorage.setItem("titleLesson1-msg", "Урок 1 Привіт! ✔️");
+    localStorage.setItem("diaryLesson1-msg", "Урок 1: ⭐");
+    onLocalStorage1();
     markupSuccess();
   } else if (hello === "Hello ✔️" || hello === "hello ✔️") {
     onAudioError();
@@ -470,6 +477,23 @@ function onFormSubmit(e) {
     markupError();
   }
 }
+
+function onLocalStorage1() {
+  const saveBtn2Background1 = localStorage.getItem("btn2Background1");
+  const saveTitle1 = localStorage.getItem("titleLesson1-msg");
+  const saveDiary1 = localStorage.getItem("diaryLesson1-msg");
+
+  if (saveBtn2Background1 && saveTitle1 && saveDiary1) {
+    refs.box1.style.backgroundColor = "#2ecc71";
+    refs.boxTitle.textContent = "Урок 1 ✔️";
+    refs.lesson1.textContent = "Урок 2: ⭐";
+
+    // refs.box1.style.backgroundColor = "#2ecc71";
+    // refs.boxTitle.textContent = "Урок 1 Hello! ✔️";
+    // refs.lesson1.textContent = "Урок 1: ⭐";
+  }
+}
+onLocalStorage1();
 
 // audio
 const onAudioSuccess = () => {
@@ -521,6 +545,7 @@ const onSmileyError = (inputError) => {
 };
 
 // форма 2 --------------------------------------------------------------
+
 refs.formSubmit02.addEventListener("submit", onFormSubmit02);
 refs.inputWhat.addEventListener("input", onInput1);
 refs.inputMyName.addEventListener("input", onInput22);
@@ -536,12 +561,13 @@ function onFormSubmit02(e) {
     (what === "What is your name ✔️" && myname === "my name is anna ✔️") ||
     (what === "what is your name ✔️" && myname === "My name is Anna ✔️")
   ) {
-    // onAudioSuccess();
     refs.audioSrc2.src = "../audio/Правильна відповідь .mp3";
-    // refs.itemColor.classList.add("green");
-    refs.box2.style.backgroundColor = "#2ecc71";
-    refs.boxTitle2.textContent = "Урок 2 What is your name? ✔️";
-    refs.lesson2.textContent = "Урок 2: ⭐";
+
+    localStorage.setItem("btn2Background", "#2ecc71");
+    localStorage.setItem("titleLesson2-msg", "Урок 2 Як тебе звати? ✔️");
+    localStorage.setItem("diaryLesson2-msg", "Урок 2: ⭐");
+    onLocalStorage();
+
     markupSuccess1();
   } else if (
     what === "What is your name ✔️" ||
@@ -567,9 +593,21 @@ function onFormSubmit02(e) {
     // onAudioError();
     refs.audioSrc2.src = "../audio/Відповідь неправильн.mp3";
     markupError1();
-    // refs.itemColor.classList.add("red");
   }
 }
+
+function onLocalStorage() {
+  const saveBtn2Background = localStorage.getItem("btn2Background");
+  const saveTitle2 = localStorage.getItem("titleLesson2-msg");
+  const saveDiary2 = localStorage.getItem("diaryLesson2-msg");
+
+  if (saveBtn2Background && saveTitle2 && saveDiary2) {
+    refs.box2.style.backgroundColor = "#2ecc71";
+    refs.boxTitle2.textContent = "Урок 2 ✔️";
+    refs.lesson2.textContent = "Урок 2: ⭐";
+  }
+}
+onLocalStorage();
 
 // markup
 const markupSuccess1 = () => {
@@ -632,9 +670,13 @@ function onFormSubmit03(e) {
     refs.audioSrc3.src = "../audio/Правильна відповідь .mp3";
     // refs.itemColor3.classList.add("green");
 
-    refs.box3.style.backgroundColor = "#2ecc71";
-    refs.boxTitle3.textContent = "Урок 3 And you? I am... ✔️";
-    refs.lesson3.textContent = "Урок 3: ⭐";
+    // refs.box3.style.backgroundColor = "#2ecc71";
+    // refs.boxTitle3.textContent = "Урок 3 And you? I am... ✔️";
+    // refs.lesson3.textContent = "Урок 3: ⭐";
+    localStorage.setItem("btn2Background3", "#2ecc71");
+    localStorage.setItem("titleLesson3-msg", "Урок 2 Як тебе звати? ✔️");
+    localStorage.setItem("diaryLesson3-msg", "Урок 3: ⭐");
+    onLocalStorage3();
     markupSuccess3();
   } else if (andYou === "And you ✔️" || andYou === "and you ✔️") {
     // onAudioError();
@@ -657,6 +699,19 @@ function onFormSubmit03(e) {
     // refs.itemColor.classList.add("red");
   }
 }
+
+function onLocalStorage3() {
+  const saveBtn2Background3 = localStorage.getItem("btn2Background3");
+  const saveTitle3 = localStorage.getItem("titleLesson3-msg");
+  const saveDiary3 = localStorage.getItem("diaryLesson3-msg");
+
+  if (saveBtn2Background3 && saveTitle3 && saveDiary3) {
+    refs.box3.style.backgroundColor = "#2ecc71";
+    refs.boxTitle3.textContent = "Урок 3 ✔️";
+    refs.lesson3.textContent = "Урок 3: ⭐";
+  }
+}
+onLocalStorage3();
 
 // markup
 const markupSuccess3 = () => {
@@ -719,9 +774,13 @@ function onFormSubmit04(e) {
     // onAudioSuccess();
     refs.audioSrc4.src = "../audio/Правильна відповідь .mp3";
     // refs.itemColor4.classList.add("green");
-    refs.box4.style.backgroundColor = "#2ecc71";
-    refs.boxTitle4.textContent = "Урок 1 Nice to meet you! ✔️";
-    refs.lesson4.textContent = "Урок 4: ⭐";
+    // refs.box4.style.backgroundColor = "#2ecc71";
+    // refs.boxTitle4.textContent = "Урок 1 Nice to meet you! ✔️";
+    // refs.lesson4.textContent = "Урок 4: ⭐";
+    localStorage.setItem("btn2Background4", "#2ecc71");
+    localStorage.setItem("titleLesson4-msg", "Урок 4 ✔️");
+    localStorage.setItem("diaryLesson4-msg", "Урок 4: ⭐");
+    onLocalStorage4();
     markupSuccess4();
   } else if (nice === "Nice to meet you ✔️" || nice === "nice to meet you ✔️") {
     // onAudioError();
@@ -747,6 +806,19 @@ function onFormSubmit04(e) {
     // refs.itemColor.classList.add("red");
   }
 }
+
+function onLocalStorage4() {
+  const saveBtn2Background4 = localStorage.getItem("btn2Background4");
+  const saveTitle4 = localStorage.getItem("titleLesson4-msg");
+  const saveDiary4 = localStorage.getItem("diaryLesson4-msg");
+
+  if (saveBtn2Background4 && saveTitle4 && saveDiary4) {
+    refs.box4.style.backgroundColor = "#2ecc71";
+    refs.boxTitle4.textContent = "Урок 4 ✔️";
+    refs.lesson4.textContent = "Урок 4: ⭐";
+  }
+}
+onLocalStorage4();
 
 // markup
 const markupSuccess4 = () => {
@@ -1058,9 +1130,13 @@ function onFormSubmit08(e) {
   ) {
     refs.audioSrc8.src = "../audio/Правильна відповідь .mp3";
     // refs.itemColor4.classList.add("green");
-    refs.box6.style.backgroundColor = "#2ecc71";
-    refs.boxTitle6.textContent = "Перевірка знань ✔️";
-    refs.lesson6.textContent = "Перевірка знань: ⭐";
+    // refs.box6.style.backgroundColor = "#2ecc71";
+    // refs.boxTitle6.textContent = "Перевірка знань ✔️";
+    // refs.lesson6.textContent = "Перевірка знань: ⭐";
+    localStorage.setItem("btn2Background6", "#2ecc71");
+    localStorage.setItem("titleLesson6-msg", "Перевірка знань ✔️");
+    localStorage.setItem("diaryLesson6-msg", "Перевірка знань: ⭐");
+    onLocalStorage6();
     markupSuccess8();
   } else if (
     nice8 === "Nice to meet you ✔️" ||
@@ -1089,6 +1165,19 @@ function onFormSubmit08(e) {
     // refs.itemColor.classList.add("red");
   }
 }
+
+function onLocalStorage6() {
+  const saveBtn2Background6 = localStorage.getItem("btn2Background6");
+  const saveTitle6 = localStorage.getItem("titleLesson6-msg");
+  const saveDiary6 = localStorage.getItem("diaryLesson6-msg");
+
+  if (saveBtn2Background6 && saveTitle6 && saveDiary6) {
+    refs.box6.style.backgroundColor = "#2ecc71";
+    refs.boxTitle6.textContent = "Перевірка знань ✔️";
+    refs.lesson6.textContent = "Перевірка знань: ⭐";
+  }
+}
+onLocalStorage6();
 
 // markup
 const markupSuccess8 = () => {
@@ -1131,187 +1220,152 @@ const onSmileyError8 = (inputError) => {
   inputError.value = `${inputError.value} ❌`;
 };
 
-// refs.inputSrc5.addEventListener("input");
-// refs.inputSubmit5.addEventListener("input");
+// ______________________________________________
 
-// function onFormSubmit05(e) {
-//   e.preventDefault();
-//   const formElements5 = e.currentTarget.elements;
-//   const hello5 = formElements5.hello5.value;
-//   const what5 = formElements5.what5.value;
-//   const hi5 = formElements5.hi5.value;
-//   const my5 = formElements5.my5.value;
-//   const and5 = formElements5.and5.value;
+refs.btnStart.addEventListener("click", onBtnStart);
 
-//   if (
-//     (hello5 === "Hello ✔️" &&
-//       what5 === "What is your name ✔️" &&
-//       hi5 === "Hi ✔️" &&
-//       my5 === "My name is Anna ✔️" &&
-//       and5 === "And you ✔️") ||
-//     (hello5 === "hello ✔️" &&
-//       what5 === "what is your name ✔️" &&
-//       hi5 === "hi ✔️" &&
-//       my5 === "my name is anna ✔️" &&
-//       and5 === "and you ✔️")
-//   ) {
-//     refs.audioSrc4.src = "../audio/Правильна відповідь .mp3";
-//     markupSuccess5();
-//   } else if (
-//     (hello5 === "Hello ✔️" &&
-//       what5 === "What is your name ✔️" &&
-//       hi5 === "Hi ✔️" &&
-//       my5 === "My name is Anna ✔️") ||
-//     (hello5 === "hello ✔️" &&
-//       what5 === "what is your name ✔️" &&
-//       hi5 === "hi ✔️" &&
-//       my5 === "my name is anna ✔️")
-//   ) {
-//     onSmileyError5(refs.inputAnd5);
-//     refs.audioSrc4.src = "../audio/Відповідь неправильн.mp3";
-//     markupError5();
-//   } else if (
-//     (hello5 === "Hello ✔️" &&
-//       what5 === "What is your name ✔️" &&
-//       hi5 === "Hi ✔️") ||
-//     (hello5 === "hello ✔️" &&
-//       what5 === "what is your name ✔️" &&
-//       hi5 === "hi ✔️")
-//   ) {
-//     onSmileyError5(refs.inputMy5);
-//     onSmileyError5(refs.inputAnd5);
-//     refs.audioSrc4.src = "../audio/Відповідь неправильн.mp3";
-//     markupError5();
-//   } else if (
-//     (hello5 === "Hello ✔️" && what5 === "What is your name ✔️") ||
-//     (hello5 === "hello ✔️" && what5 === "what is your name ✔️")
-//   ) {
-//     onSmileyError5(refs.inputHi52);
-//     onSmileyError5(refs.inputMy5);
-//     onSmileyError5(refs.inputAnd5);
-//     refs.audioSrc4.src = "../audio/Відповідь неправильн.mp3";
-//     markupError5();
-//   } else if (hello5 === "Hello ✔️" || hello5 === "hello ✔️") {
-//     refs.audioSrc4.src = "../audio/Відповідь неправильн.mp3";
-//     // onSmileyError5(refs.inputHello5);
-//     onSmileyError5(refs.inputWhat05);
-//     onSmileyError5(refs.inputHi52);
-//     onSmileyError5(refs.inputMy5);
-//     onSmileyError5(refs.inputAnd5);
-//     markupError5();
-//   } else if (
-//     what5 === "What is your name ✔️" ||
-//     what5 === "what is your name ✔️"
-//   ) {
-//     refs.audioSrc4.src = "../audio/Відповідь неправильн.mp3";
-//     onSmileyError5(refs.inputHello5);
-//     // onSmileyError5(refs.inputWhat05);
-//     onSmileyError5(refs.inputHi52);
-//     onSmileyError5(refs.inputMy5);
-//     onSmileyError5(refs.inputAnd5);
-//     markupError5();
-//   } else if (hi5 === "Hi ✔️" || hi5 === "hi ✔️") {
-//     refs.audioSrc4.src = "../audio/Відповідь неправильн.mp3";
-//     onSmileyError5(refs.inputHello5);
-//     onSmileyError5(refs.inputWhat05);
-//     //  onSmileyError5(refs.inputHi52);
-//     onSmileyError5(refs.inputMy5);
-//     onSmileyError5(refs.inputAnd5);
-//     markupError5();
-//   } else if (my5 === "My name is Anna ✔️" || my5 === "my name is anna ✔️") {
-//     refs.audioSrc4.src = "../audio/Відповідь неправильн.mp3";
-//     onSmileyError5(refs.inputHello5);
-//     onSmileyError5(refs.inputWhat05);
-//     onSmileyError5(refs.inputHi52);
-//     // onSmileyError5(refs.inputMy5);
-//     onSmileyError5(refs.inputAnd5);
-//     markupError5();
-//   } else if (and5 === "And you ✔️" || and5 === "and you ✔️") {
-//     refs.audioSrc4.src = "../audio/Відповідь неправильн.mp3";
-//     onSmileyError5(refs.inputHello5);
-//     onSmileyError5(refs.inputWhat05);
-//     onSmileyError5(refs.inputHi52);
-//     onSmileyError5(refs.inputMy5);
-//     // onSmileyError5(refs.inputAnd5);
-//     markupError5();
-//   } else {
-//     onSmileyError5(refs.inputHello5);
-//     onSmileyError5(refs.inputWhat05);
-//     onSmileyError5(refs.inputHi52);
-//     onSmileyError5(refs.inputMy5);
-//     onSmileyError5(refs.inputAnd5);
-//     refs.audioSrc3.src = "../audio/Відповідь неправильн.mp3";
-//     markupError5();
-//   }
-// }
+function onBtnStart() {
+  // localStorage.clear();
+  // if (
+  //   localStorage.getItem("btn2Background1") &&
+  //   localStorage.getItem("titleLesson1-msg") &&
+  //   localStorage.getItem("diaryLesson1-msg")
+  // ) {
+  //   removeLocalStorage("btn2Background1");
+  //   removeLocalStorage("titleLesson1-msg");
+  //   removeLocalStorage("diaryLesson1-msg");
+  //   refs.box1.style.backgroundColor = "#446df4";
+  //   refs.boxTitle.textContent = "Урок 1 Привіт!";
+  //   refs.lesson1.textContent = "Урок 1:";
+  // } else if (
+  //   localStorage.getItem("btn2Background") &&
+  //   localStorage.getItem("titleLesson2-msg") &&
+  //   localStorage.getItem("diaryLesson2-msg")
+  // ) {
+  //   removeLocalStorage("btn2Background");
+  //   removeLocalStorage("titleLesson2-msg");
+  //   removeLocalStorage("diaryLesson2-msg");
+  //   refs.box2.style.backgroundColor = "#446df4";
+  //   refs.boxTitle2.textContent = "Урок 2 Як тебе звати?";
+  //   refs.lesson2.textContent = "Урок 2:";
+  // } else if (
+  //   localStorage.getItem("btn2Background3") &&
+  //   localStorage.getItem("titleLesson3-msg") &&
+  //   localStorage.getItem("diaryLesson3-msg")
+  // ) {
+  //   removeLocalStorage("btn2Background3");
+  //   removeLocalStorage("titleLesson3-msg");
+  //   removeLocalStorage("diaryLesson3-msg");
+  //   refs.box3.style.backgroundColor = "#446df4";
+  //   refs.boxTitle3.textContent = "Урок 3 А як тебе?";
+  //   refs.lesson3.textContent = "Урок 3:";
+  // } else if (
+  //   localStorage.getItem("btn2Background4") &&
+  //   localStorage.getItem("titleLesson4-msg") &&
+  //   localStorage.getItem("diaryLesson4-msg")
+  // ) {
+  //   removeLocalStorage("btn2Background4");
+  //   removeLocalStorage("titleLesson4-msg");
+  //   removeLocalStorage("diaryLesson4-msg");
+  //   refs.box4.style.backgroundColor = "#446df4";
+  //   refs.boxTitle4.textContent = "Урок 4 Приємно познайомитись!";
+  //   refs.lesson4.textContent = "Урок 4:";
+  // } else if (
+  //   localStorage.getItem("btn2Background6") &&
+  //   localStorage.getItem("titleLesson6-msg") &&
+  //   localStorage.getItem("diaryLesson6-msg")
+  // ) {
+  //   removeLocalStorage("btn2Background6");
+  //   removeLocalStorage("titleLesson6-msg");
+  //   removeLocalStorage("diaryLesson6-msg");
+  //   refs.box6.style.backgroundColor = "#446df4";
+  //   refs.boxTitle6.textContent = "Перевірка знань";
+  //   refs.lesson6.textContent = "Перевірка знань:";
+  // } else if (
+  //   localStorage.getItem("btn2Background1") &&
+  //   localStorage.getItem("titleLesson1-msg") &&
+  //   localStorage.getItem("diaryLesson1-msg") &&
+  //   localStorage.getItem("btn2Background") &&
+  //   localStorage.getItem("titleLesson2-msg") &&
+  //   localStorage.getItem("diaryLesson2-msg") &&
+  //   localStorage.getItem("btn2Background3") &&
+  //   localStorage.getItem("titleLesson3-msg") &&
+  //   localStorage.getItem("diaryLesson3-msg") &&
+  //   localStorage.getItem("btn2Background4") &&
+  //   localStorage.getItem("titleLesson4-msg") &&
+  //   localStorage.getItem("diaryLesson4-msg") &&
+  //   localStorage.getItem("btn2Background6") &&
+  //   localStorage.getItem("titleLesson6-msg") &&
+  //   localStorage.getItem("diaryLesson6-msg")
+  // ) {
+  //   removeLocalStorage("btn2Background1");
+  //   removeLocalStorage("titleLesson1-msg");
+  //   removeLocalStorage("diaryLesson1-msg");
+  //   refs.box1.style.backgroundColor = "#446df4";
+  //   refs.boxTitle.textContent = "Урок 1 Привіт!";
+  //   refs.lesson1.textContent = "Урок 1:";
+  //   removeLocalStorage("btn2Background");
+  //   removeLocalStorage("titleLesson2-msg");
+  //   removeLocalStorage("diaryLesson2-msg");
+  //   refs.box2.style.backgroundColor = "#446df4";
+  //   refs.boxTitle2.textContent = "Урок 2 Як тебе звати?";
+  //   refs.lesson2.textContent = "Урок 2:";
+  //   removeLocalStorage("btn2Background3");
+  //   removeLocalStorage("titleLesson3-msg");
+  //   removeLocalStorage("diaryLesson3-msg");
+  //   refs.box3.style.backgroundColor = "#446df4";
+  //   refs.boxTitle3.textContent = "Урок 3 А як тебе?";
+  //   refs.lesson3.textContent = "Урок 3:";
+  //   removeLocalStorage("btn2Background4");
+  //   removeLocalStorage("titleLesson4-msg");
+  //   removeLocalStorage("diaryLesson4-msg");
+  //   refs.box4.style.backgroundColor = "#446df4";
+  //   refs.boxTitle4.textContent = "Урок 4 Приємно познайомитись!";
+  //   refs.lesson4.textContent = "Урок 4:";
+  //   removeLocalStorage("btn2Background6");
+  //   removeLocalStorage("titleLesson6-msg");
+  //   removeLocalStorage("diaryLesson6-msg");
+  //   refs.box6.style.backgroundColor = "#446df4";
+  //   refs.boxTitle6.textContent = "Перевірка знань";
+  //   refs.lesson6.textContent = "Перевірка знань:";
+  // }
+  // console.log(localStorage.getItem("key") === null);
+  if (localStorage.getItem("key") === null) {
+    removeLocalStorage("btn2Background1");
+    removeLocalStorage("titleLesson1-msg");
+    removeLocalStorage("diaryLesson1-msg");
+    refs.box1.style.backgroundColor = "#446df4";
+    refs.boxTitle.textContent = "Урок 1 Привіт!";
+    refs.lesson1.textContent = "Урок 1:";
+    removeLocalStorage("btn2Background");
+    removeLocalStorage("titleLesson2-msg");
+    removeLocalStorage("diaryLesson2-msg");
+    refs.box2.style.backgroundColor = "#446df4";
+    refs.boxTitle2.textContent = "Урок 2 Як тебе звати?";
+    refs.lesson2.textContent = "Урок 2:";
+    removeLocalStorage("btn2Background3");
+    removeLocalStorage("titleLesson3-msg");
+    removeLocalStorage("diaryLesson3-msg");
+    refs.box3.style.backgroundColor = "#446df4";
+    refs.boxTitle3.textContent = "Урок 3 А як тебе?";
+    refs.lesson3.textContent = "Урок 3:";
+    removeLocalStorage("btn2Background4");
+    removeLocalStorage("titleLesson4-msg");
+    removeLocalStorage("diaryLesson4-msg");
+    refs.box4.style.backgroundColor = "#446df4";
+    refs.boxTitle4.textContent = "Урок 4 Приємно познайомитись!";
+    refs.lesson4.textContent = "Урок 4:";
+    removeLocalStorage("btn2Background6");
+    removeLocalStorage("titleLesson6-msg");
+    removeLocalStorage("diaryLesson6-msg");
+    refs.box6.style.backgroundColor = "#446df4";
+    refs.boxTitle6.textContent = "Перевірка знань";
+    refs.lesson6.textContent = "Перевірка знань:";
+  }
+}
 
-// markup
-// const markupSuccess5 = () => {
-//   refs.btnSubmit5.textContent = "Вітаю! 👍";
-//   refs.btnSubmit5.style.backgroundColor = "#2ecc71";
-//   // refs.item01.classList.add("gray2");
-// };
-
-// const markupError5 = () => {
-//   refs.btnSubmit5.textContent = "Спробуй ще... 🙄";
-//   refs.btnSubmit5.style.backgroundColor = "tomato";
-// };
-
-// input-1
-// function onInput5(event) {
-//   if (
-//     event.currentTarget.value === "Hello" ||
-//     event.currentTarget.value === "hello"
-//   ) {
-//     onSmileySuccess5(refs.inputHello5);
-//   }
-// }
-
-// inpup-2
-// function onInput05(event) {
-//   if (
-//     event.currentTarget.value === "What is your name" ||
-//     event.currentTarget.value === "what is your name"
-//   ) {
-//     onSmileySuccess5(refs.inputWhat05);
-//   }
-// }
-
-// input-3
-// function onInputHi5(event) {
-//   if (
-//     event.currentTarget.value === "Hi" ||
-//     event.currentTarget.value === "hi"
-//   ) {
-//     onSmileySuccess5(refs.inputHi52);
-//   }
-// }
-
-// inpup-4
-// function onInputMy5(event) {
-//   if (
-//     event.currentTarget.value === "My name is Anna" ||
-//     event.currentTarget.value === "my name is anna"
-//   ) {
-//     onSmileySuccess5(refs.inputMy5);
-//   }
-// }
-
-// input 5
-// function onInputAnd5(event) {
-//   if (
-//     event.currentTarget.value === "And you" ||
-//     event.currentTarget.value === "and you"
-//   ) {
-//     onSmileySuccess5(refs.inputAnd5);
-//   }
-// }
-
-// emoji success and error
-// const onSmileySuccess5 = (inputSuccess) => {
-//   inputSuccess.value = `${inputSuccess.value} ✔️`;
-// };
-
-// const onSmileyError5 = (inputError) => {
-//   inputError.value = `${inputError.value} ❌`;
-// };
+function removeLocalStorage(localStorageKey) {
+  localStorage.removeItem(localStorageKey);
+  localStorage.removeItem(localStorageKey);
+  localStorage.removeItem(localStorageKey);
+}
