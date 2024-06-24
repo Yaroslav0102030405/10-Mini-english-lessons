@@ -486,7 +486,7 @@ function onLocalStorage1() {
   if (saveBtn2Background1 && saveTitle1 && saveDiary1) {
     refs.box1.style.backgroundColor = "#2ecc71";
     refs.boxTitle.textContent = "Урок 1 ✔️";
-    refs.lesson1.textContent = "Урок 2: ⭐";
+    refs.lesson1.textContent = "Урок 1: ⭐";
 
     // refs.box1.style.backgroundColor = "#2ecc71";
     // refs.boxTitle.textContent = "Урок 1 Hello! ✔️";

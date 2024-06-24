@@ -90,9 +90,9 @@ li {
 
 .students-diary {
   padding: 10px;
-  border: 2px solid black;
+  border: 2px solid #b2beb5;
   border-radius: 10px;
-  width: 180px;
+  width: 220px;
   margin-left: auto;
   margin-right: auto;
   margin-bottom: 50px;
@@ -100,6 +100,7 @@ li {
 
 .students-diary li p {
   text-align: start;
+  color: #b2beb5;
 }
 
 .list {
@@ -175,11 +176,11 @@ li {
   box-shadow: 10px 5px 5px black;
   vertical-align: middle;
   background-color: #e5e4e2;
+
+  transition: background-color 250ms linear;
 }
 
 .submit:hover {
-  /* background-color: white; */
-  /* background-color: #f4c144; */
   background-color: #2ecc71;
 }
 
@@ -216,6 +217,8 @@ li {
   display: flex;
   margin-right: 10px;
   fill: #001d5f;
+
+  transition: fill 250ms linear;
 }
 
 .btn-icon1:hover {
@@ -226,6 +229,8 @@ li {
   display: flex;
   margin-right: 10px;
   fill: #001d5f;
+
+  transition: fill 250ms linear;
 }
 
 .btn-icon2:hover {
@@ -351,6 +356,7 @@ input::placeholder {
   cursor: pointer;
 
   /* background-color: #e5e4e2; */
+  transition: background-color 250ms linear;
 }
 
 .closeModal-0:focus,
@@ -367,6 +373,8 @@ input::placeholder {
   background-color: #446df4;
   border-radius: 10px;
   cursor: pointer;
+
+  transition: background-color 250ms linear;
 }
 
 .box-styles:focus,
@@ -705,5 +713,6 @@ input::placeholder {
 .btn-start {
   margin-bottom: 30px;
   cursor: pointer;
-  background-color: tomato;
+  /* background-color: tomato; */
+  background-color: #b2beb5;
 }
