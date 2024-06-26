@@ -1362,13 +1362,29 @@ function onBtnStart() {
     refs.boxTitle6.textContent = "Перевірка знань";
     refs.lesson6.textContent = "Перевірка знань:";
     refs.formSubmit.reset();
+    refs.btnSubmit.style.backgroundColor = "#e5e4e2";
+    refs.btnSubmit.textContent = "Перевірити 🤔";
     refs.formSubmit02.reset();
+    refs.btnSubmit2.style.backgroundColor = "#e5e4e2";
+    refs.btnSubmit2.textContent = "Перевірити 🤔";
     refs.formSubmit03.reset();
+    refs.btnSubmit3.style.backgroundColor = "#e5e4e2";
+    refs.btnSubmit3.textContent = "Перевірити 🤔";
     refs.formSubmit04.reset();
+    refs.btnSubmit4.style.backgroundColor = "#e5e4e2";
+    refs.btnSubmit4.textContent = "Перевірити 🤔";
     refs.formSubmit05.reset();
+    refs.btnSubmit5.style.backgroundColor = "#e5e4e2";
+    refs.btnSubmit5.textContent = "Перевірити 🤔";
     refs.formSubmit6.reset();
+    refs.btnSubmit6.style.backgroundColor = "#e5e4e2";
+    refs.btnSubmit6.textContent = "Перевірити 🤔";
     refs.formSubmit7.reset();
+    refs.btnSubmit7.style.backgroundColor = "#e5e4e2";
+    refs.btnSubmit7.textContent = "Перевірити 🤔";
     refs.formSubmit8.reset();
+    refs.btnSubmit8.style.backgroundColor = "#e5e4e2";
+    refs.btnSubmit8.textContent = "Перевірити 🤔";
   }
 }
 
