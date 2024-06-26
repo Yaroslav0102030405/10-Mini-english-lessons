@@ -1361,6 +1361,14 @@ function onBtnStart() {
     refs.box6.style.backgroundColor = "#446df4";
     refs.boxTitle6.textContent = "Перевірка знань";
     refs.lesson6.textContent = "Перевірка знань:";
+    refs.formSubmit.reset();
+    refs.formSubmit02.reset();
+    refs.formSubmit03.reset();
+    refs.formSubmit04.reset();
+    refs.formSubmit05.reset();
+    refs.formSubmit6.reset();
+    refs.formSubmit7.reset();
+    refs.formSubmit8.reset();
   }
 }
 
